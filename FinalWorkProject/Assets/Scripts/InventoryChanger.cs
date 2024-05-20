@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryChanger : MonoBehaviour
 {
-    public CheckObjectives checkObjectives;
+    public AtariScript AtariScript;
+    public NESScript NESScript;
 
     public GameObject InventoryMenu;
     public GameObject InventoryConsoleMenu;
@@ -91,32 +92,32 @@ public class InventoryChanger : MonoBehaviour
 
     public void ConsoleNameBtn1Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.AtariConsoleInfo();
+        AtariScript.AtariConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ConsoleNameBtn2Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.NESConsoleInfo();
+        NESScript.NESConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ControllerNameBtn1Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.AtariControllerInfo();
+        AtariScript.AtariControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ControllerNameBtn2Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.NESControllerInfo();
+        NESScript.NESControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void CartridgeNameBtn1Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.AtariCartridgeInfo();
+        AtariScript.AtariCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void CartridgeNameBtn2Click(){
         InfoCanvas.SetActive(true);
-        checkObjectives.NESCartridgeInfo();
+        NESScript.NESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
     

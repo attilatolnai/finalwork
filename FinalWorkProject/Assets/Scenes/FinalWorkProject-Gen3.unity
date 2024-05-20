@@ -315,6 +315,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a311202838f7e0048839cfdc765d1c3b, type: 3}
   m_PrefabInstance: {fileID: 3955897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4299855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4299857}
+  - component: {fileID: 4299856}
+  m_Layer: 0
+  m_Name: AtariManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &4299856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977918d4f744b6e4c90506edd53f31f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfoCanvas: {fileID: 8957755147957985302}
+  ItemDescriptionImage: {fileID: 8957755147957985301}
+  ItemDescriptionName: {fileID: 8957755147957985300}
+  ItemDescriptionText: {fileID: 8957755147957985299}
+  ItemDescriptionReturnBtn: {fileID: 8957755147957985298}
+  AtariSprite: {fileID: 21300000, guid: ff6bda382da07e0429265391db4ede91, type: 3}
+  AtariControllerSprite: {fileID: 21300000, guid: 9c6235d2b87abca418d25017141c47d8, type: 3}
+  AtariCartridgeSprite: {fileID: 21300000, guid: ee2946c9a7fe76941944af80dfcff962, type: 3}
+  InteractWithAtariConsole: {fileID: 1622395265}
+  Atari: {fileID: 1372024409}
+  ConsoleNameBtn1: {fileID: 32748559}
+  ConsoleImageSlot1: {fileID: 1293787296}
+  ConsoleImageSlot1Atari: {fileID: 1787637161}
+  InteractWithAtariController: {fileID: 1646685230}
+  Atari_Controller: {fileID: 576737279}
+  ControllerNameBtn1: {fileID: 1550765847}
+  ControllerImageSlot1: {fileID: 1770996609}
+  ControllerImageSlot1Atari: {fileID: 884025478}
+  InteractWithAtariCartridge: {fileID: 834222366}
+  Atari_Cartridge: {fileID: 246226787}
+  CartridgeNameBtn1: {fileID: 1001260353}
+  CartridgeImageSlot1: {fileID: 1292245080}
+  CartridgeImageSlot1Atari: {fileID: 927085425}
+--- !u!4 &4299857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.079566866, y: 1.3244884, z: -1.1008922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &31682584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1104914134488328162, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
@@ -1175,6 +1242,73 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!1 &247934989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247934991}
+  - component: {fileID: 247934990}
+  m_Layer: 0
+  m_Name: NESManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &247934990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247934989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816b74f0841b34f46a62882049d85258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfoCanvas: {fileID: 8957755147957985302}
+  ItemDescriptionImage: {fileID: 8957755147957985301}
+  ItemDescriptionName: {fileID: 8957755147957985300}
+  ItemDescriptionText: {fileID: 8957755147957985299}
+  ItemDescriptionReturnBtn: {fileID: 8957755147957985298}
+  NESSprite: {fileID: 21300000, guid: ea21df0d0d2e22d40acf48b94d55bdfb, type: 3}
+  NESControllerSprite: {fileID: 21300000, guid: c9368e0203efeb148a746e100d0e1f68, type: 3}
+  NESCartridgeSprite: {fileID: 21300000, guid: f6764dc60dbff7e4dafef23f9bfb4493, type: 3}
+  InteractWithNESConsole: {fileID: 283059795}
+  NES: {fileID: 414111662}
+  ConsoleNameBtn2: {fileID: 378920442}
+  ConsoleImageSlot2: {fileID: 1275398368}
+  ConsoleImageSlot2NES: {fileID: 1155554351}
+  InteractWithNESController: {fileID: 1810149406}
+  NES_Controller: {fileID: 1787785168}
+  ControllerNameBtn2: {fileID: 192189192}
+  ControllerImageSlot2: {fileID: 31682584}
+  ControllerImageSlot2NES: {fileID: 1164757562}
+  InteractWithNESCartridge: {fileID: 1553586946}
+  NES_Cartridge: {fileID: 2060192505}
+  CartridgeNameBtn2: {fileID: 1885530006}
+  CartridgeImageSlot2: {fileID: 1067399631}
+  CartridgeImageSlot2NES: {fileID: 362077952}
+--- !u!4 &247934991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247934989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.079566866, y: 1.3244884, z: -1.1008922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &283059795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3143102531776857100, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
@@ -2524,6 +2658,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778191800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &783034993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783034994}
+  m_Layer: 0
+  m_Name: Atari_controller (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &783034994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783034993}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783717359 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8045589763379140637, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
@@ -3950,6 +4115,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7095367677468262569, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
   m_PrefabInstance: {fileID: 8957755147957985297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271424904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271424905}
+  m_Layer: 0
+  m_Name: Atari_console (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1271424905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271424904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275398368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1068496622851460168, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
@@ -7596,6 +7792,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121496563}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2135751186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135751187}
+  m_Layer: 0
+  m_Name: Atari_cartridge (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2135751187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135751186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5568926773504556528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7726,6 +7953,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ea21df0d0d2e22d40acf48b94d55bdfb, type: 3}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: nesScript
+      value: 
+      objectReference: {fileID: 247934990}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: DoorCanvas
       value: 
       objectReference: {fileID: 1698653224}
@@ -7737,6 +7968,10 @@ PrefabInstance:
       propertyPath: AtariSprite
       value: 
       objectReference: {fileID: 21300000, guid: ff6bda382da07e0429265391db4ede91, type: 3}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: atariScript
+      value: 
+      objectReference: {fileID: 4299856}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: NES_Cartridge
       value: 
@@ -8036,6 +8271,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 396379503}
     - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: NESScript
+      value: 
+      objectReference: {fileID: 247934990}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: AtariScript
+      value: 
+      objectReference: {fileID: 4299856}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: ConsoleNameBtn1
       value: 
       objectReference: {fileID: 783717364}
@@ -8235,3 +8478,8 @@ SceneRoots:
   - {fileID: 1380090196}
   - {fileID: 297539020}
   - {fileID: 1341312364}
+  - {fileID: 4299857}
+  - {fileID: 247934991}
+  - {fileID: 1271424905}
+  - {fileID: 783034994}
+  - {fileID: 2135751187}
