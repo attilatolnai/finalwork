@@ -10,6 +10,17 @@ public class CheckObjectives : MonoBehaviour
     //CANVAS
     public GameObject DoorCanvas;
 
+    //INFOCANVAS
+    public GameObject InfoCanvas;
+    public Image ItemDescriptionImage;
+    public TMP_Text ItemDescriptionName;
+    public TMP_Text ItemDescriptionText;
+    public Button ItemDescriptionReturnBtn;
+
+    //SPRITES
+    public Sprite AtariSprite;
+
+
     //ATARI-------------------------------------------------------------------------
     //CONSOLE
     public TMP_Text InteractWithAtariConsole;
@@ -78,6 +89,17 @@ public class CheckObjectives : MonoBehaviour
         // Disable DoorCanvas
         DoorCanvas.SetActive(false);
 
+        // Disable InfoCanvas
+        InfoCanvas.SetActive(false);
+
+        // Load sprites from Resources
+        AtariSprite = Resources.Load<Sprite>("Images/Atari_console");
+
+        // Set initial InfoCanvas components
+        ItemDescriptionImage.sprite = null;
+        ItemDescriptionName.text = "???";
+        ItemDescriptionText.text = "???";
+
         // Set colors to white
         InteractWithAtariConsole.color = Color.white;
         InteractWithAtariController.color = Color.white;
@@ -106,49 +128,47 @@ public class CheckObjectives : MonoBehaviour
     {
         //ATARI----------------------------------------------------------------------------------
         //CONSOLE
-        if (AtariGrabbable.isGrabbed && !isAtariGrabbed)
-        {
+        if (AtariGrabbable.isGrabbed && !isAtariGrabbed){
             GrabAtari();
             Debug.Log("The Atari is grabbed");
             isAtariGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!AtariGrabbable.isGrabbed && isAtariGrabbed){
+            isAtariGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
         //CONTROLLER
-        if (AtariControllerGrabbable.isGrabbed && !isAtariControllerGrabbed)
-        {
+        if (AtariControllerGrabbable.isGrabbed && !isAtariControllerGrabbed){
             GrabAtariController();
             isAtariControllerGrabbed = true;
         }
         //CARTRIDGE
-        if (AtariCartridgeGrabbable.isGrabbed && !isAtariCartridgeGrabbed)
-        {
+        if (AtariCartridgeGrabbable.isGrabbed && !isAtariCartridgeGrabbed){
             GrabAtariCartridge();
             isAtariCartridgeGrabbed = true;
         }
         //NES----------------------------------------------------------------------------------
         //CONSOLE
-        if (NESGrabbable.isGrabbed && !isNESGrabbed)
-        {
+        if (NESGrabbable.isGrabbed && !isNESGrabbed){
             GrabNES();
             Debug.Log("The NES is grabbed");
             isNESGrabbed = true;
         }
         //CONTROLLER
-        if (NESControllerGrabbable.isGrabbed && !isNESControllerGrabbed)
-        {
+        if (NESControllerGrabbable.isGrabbed && !isNESControllerGrabbed){
             GrabNESController();
             isNESControllerGrabbed = true;
         }
         //CARTRIDGE
-        if (NESCartridgeGrabbable.isGrabbed && !isNESCartridgeGrabbed)
-        {
+        if (NESCartridgeGrabbable.isGrabbed && !isNESCartridgeGrabbed){
             GrabNESCartridge();
             isNESCartridgeGrabbed = true;
         }
 
         //OBJECTIVES DONE-------------------------------------------------------------------
         //Check if all objectives have been completed
-        if (CheckAllObjectivesDone())
-        {
+        if (CheckAllObjectivesDone()){
             DoorCanvas.SetActive(true);
         }
     }
@@ -160,6 +180,15 @@ public class CheckObjectives : MonoBehaviour
         ConsoleImageSlot1Atari.SetActive(true);
         ConsoleImageSlot1.SetActive(false);
         ConsoleNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
+
+        // Update InfoCanvas components
+        ItemDescriptionImage.sprite = AtariSprite;
+        ItemDescriptionName.text = "Atari";
+        ItemDescriptionText.text = "Made by: Atari, Inc.\n"+
+        "Released: September 1977\n"+
+        "About: The Atari 2600 was one of the first home video game consoles to use microprocessor-based hardware and ROM cartridges, allowing users to play a variety of games.\n"+
+        "It played a pivotal role in the growth of the video game industry, popularizing home gaming and introducing iconic games like 'Space Invaders' and 'Pitfall!'.\n"+
+        "The Atari 2600 remains a beloved and influential piece of gaming history.";
     }
     private void GrabAtariController(){
         InteractWithAtariController.color = Color.green;
@@ -194,8 +223,7 @@ public class CheckObjectives : MonoBehaviour
     }
 
 
-    private bool CheckAllObjectivesDone()
-    {
+    private bool CheckAllObjectivesDone(){
         // Check if all objectives are done
         return InteractWithAtariConsole.color == Color.green && 
         InteractWithAtariController.color == Color.green &&
