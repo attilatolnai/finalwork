@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryChanger : MonoBehaviour
 {
+    public CheckObjectives checkObjectives;
+
     public GameObject InventoryMenu;
     public GameObject InventoryConsoleMenu;
     public GameObject InventoryControllerMenu;
@@ -16,7 +18,13 @@ public class InventoryChanger : MonoBehaviour
 
     public Button ConsoleNameBtn1;
     public Button ConsoleNameBtn2;
-    public Button ConsoleNameBtn3;
+    //public Button ConsoleNameBtn3;
+
+    public Button ControllerNameBtn1;
+    public Button ControllerNameBtn2;
+
+    public Button CartridgeNameBtn1;
+    public Button CartridgeNameBtn2;
 
     public Button ItemDescriptionReturnBtn;
 
@@ -34,6 +42,7 @@ public class InventoryChanger : MonoBehaviour
         InventoryCaseMenu.SetActive(false);
         InventoryGameMenu.SetActive(false);
         ConsoleNameBtn1.onClick.AddListener(ConsoleNameBtn1Click);
+        ConsoleNameBtn2.onClick.AddListener(ConsoleNameBtn2Click);
     }
 
     public void ControllerBtnClick(){
@@ -44,6 +53,8 @@ public class InventoryChanger : MonoBehaviour
         InventoryCartridgeMenu.SetActive(false);
         InventoryCaseMenu.SetActive(false);
         InventoryGameMenu.SetActive(false);
+        ControllerNameBtn1.onClick.AddListener(ControllerNameBtn1Click);
+        ControllerNameBtn2.onClick.AddListener(ControllerNameBtn2Click);
     }
 
     public void CartridgeBtnClick(){
@@ -54,6 +65,8 @@ public class InventoryChanger : MonoBehaviour
         InventoryCartridgeMenu.SetActive(true);
         InventoryCaseMenu.SetActive(false);
         InventoryGameMenu.SetActive(false);
+        CartridgeNameBtn1.onClick.AddListener(CartridgeNameBtn1Click);
+        CartridgeNameBtn2.onClick.AddListener(CartridgeNameBtn2Click);
     }
 
     public void CaseBtnClick(){
@@ -78,6 +91,32 @@ public class InventoryChanger : MonoBehaviour
 
     public void ConsoleNameBtn1Click(){
         InfoCanvas.SetActive(true);
+        checkObjectives.AtariConsoleInfo();
+        Inventory_Sidebar.SetActive(false);
+    }
+    public void ConsoleNameBtn2Click(){
+        InfoCanvas.SetActive(true);
+        checkObjectives.NESConsoleInfo();
+        Inventory_Sidebar.SetActive(false);
+    }
+    public void ControllerNameBtn1Click(){
+        InfoCanvas.SetActive(true);
+        checkObjectives.AtariControllerInfo();
+        Inventory_Sidebar.SetActive(false);
+    }
+    public void ControllerNameBtn2Click(){
+        InfoCanvas.SetActive(true);
+        checkObjectives.NESControllerInfo();
+        Inventory_Sidebar.SetActive(false);
+    }
+    public void CartridgeNameBtn1Click(){
+        InfoCanvas.SetActive(true);
+        checkObjectives.AtariCartridgeInfo();
+        Inventory_Sidebar.SetActive(false);
+    }
+    public void CartridgeNameBtn2Click(){
+        InfoCanvas.SetActive(true);
+        checkObjectives.NESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
     

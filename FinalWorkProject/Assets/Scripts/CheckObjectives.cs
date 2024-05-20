@@ -19,7 +19,11 @@ public class CheckObjectives : MonoBehaviour
 
     //SPRITES
     public Sprite AtariSprite;
-
+    public Sprite AtariControllerSprite;
+    public Sprite AtariCartridgeSprite;
+    public Sprite NESSprite;
+    public Sprite NESControllerSprite;
+    public Sprite NESCartridgeSprite;
 
     //ATARI-------------------------------------------------------------------------
     //CONSOLE
@@ -94,6 +98,11 @@ public class CheckObjectives : MonoBehaviour
 
         // Load sprites from Resources
         AtariSprite = Resources.Load<Sprite>("Images/Atari_console");
+        AtariControllerSprite = Resources.Load<Sprite>("Images/Atari_controller");
+        AtariCartridgeSprite = Resources.Load<Sprite>("Images/Atari_cartridge");
+        NESSprite = Resources.Load<Sprite>("Images/NES_console");
+        NESControllerSprite = Resources.Load<Sprite>("Images/NES_controller");
+        NESCartridgeSprite = Resources.Load<Sprite>("Images/NES_cartridge");
 
         // Set initial InfoCanvas components
         ItemDescriptionImage.sprite = null;
@@ -142,11 +151,21 @@ public class CheckObjectives : MonoBehaviour
         if (AtariControllerGrabbable.isGrabbed && !isAtariControllerGrabbed){
             GrabAtariController();
             isAtariControllerGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!AtariControllerGrabbable.isGrabbed && isAtariControllerGrabbed){
+            isAtariControllerGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
         //CARTRIDGE
         if (AtariCartridgeGrabbable.isGrabbed && !isAtariCartridgeGrabbed){
             GrabAtariCartridge();
             isAtariCartridgeGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!AtariCartridgeGrabbable.isGrabbed && isAtariCartridgeGrabbed){
+            isAtariCartridgeGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
         //NES----------------------------------------------------------------------------------
         //CONSOLE
@@ -154,16 +173,31 @@ public class CheckObjectives : MonoBehaviour
             GrabNES();
             Debug.Log("The NES is grabbed");
             isNESGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!NESGrabbable.isGrabbed && isNESGrabbed){
+            isNESGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
         //CONTROLLER
         if (NESControllerGrabbable.isGrabbed && !isNESControllerGrabbed){
             GrabNESController();
             isNESControllerGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!NESControllerGrabbable.isGrabbed && isNESControllerGrabbed){
+            isNESControllerGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
         //CARTRIDGE
         if (NESCartridgeGrabbable.isGrabbed && !isNESCartridgeGrabbed){
             GrabNESCartridge();
             isNESCartridgeGrabbed = true;
+            InfoCanvas.SetActive(true);
+        }
+        else if (!NESCartridgeGrabbable.isGrabbed && isNESCartridgeGrabbed){
+            isNESCartridgeGrabbed = false;
+            InfoCanvas.SetActive(false);
         }
 
         //OBJECTIVES DONE-------------------------------------------------------------------
@@ -180,8 +214,10 @@ public class CheckObjectives : MonoBehaviour
         ConsoleImageSlot1Atari.SetActive(true);
         ConsoleImageSlot1.SetActive(false);
         ConsoleNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
-
-        // Update InfoCanvas components
+        AtariConsoleInfo();
+    }
+    public void AtariConsoleInfo(){
+        //Update InfoCanvas
         ItemDescriptionImage.sprite = AtariSprite;
         ItemDescriptionName.text = "Atari";
         ItemDescriptionText.text = "Made by: Atari, Inc.\n"+
@@ -190,36 +226,85 @@ public class CheckObjectives : MonoBehaviour
         "It played a pivotal role in the growth of the video game industry, popularizing home gaming and introducing iconic games like 'Space Invaders' and 'Pitfall!'.\n"+
         "The Atari 2600 remains a beloved and influential piece of gaming history.";
     }
+
     private void GrabAtariController(){
         InteractWithAtariController.color = Color.green;
         ControllerImageSlot1Atari.SetActive(true);
         ControllerImageSlot1.SetActive(false);
         ControllerNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
+        AtariControllerInfo();
     }
+    public void AtariControllerInfo(){
+        ItemDescriptionImage.sprite = AtariControllerSprite;
+        ItemDescriptionName.text = "Atari";
+        ItemDescriptionText.text = "Made by: Atari, Inc.\n"+
+        "About: A single-button digital joystick with 8-directional movement and a simple, but ergonomic design\n"+
+        "The Atari 2600 controller is often referred simply as the 'joystick', featuring a single red button and a joystick for directional input.\n"+
+        "It offered intuitive gameplay controls for the console's library of games and set a standard for future game controllers.";
+    }
+
     private void GrabAtariCartridge(){
         InteractWithAtariCartridge.color = Color.green;
         CartridgeImageSlot1Atari.SetActive(true);
         CartridgeImageSlot1.SetActive(false);
         CartridgeNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
+        AtariCartridgeInfo();
     }
+    public void AtariCartridgeInfo(){
+        ItemDescriptionImage.sprite = AtariCartridgeSprite;
+        ItemDescriptionName.text = "Atari";
+        ItemDescriptionText.text = "Made by: Atari, Inc. and various other game developers.\n"+
+        "The Atari 2600 cartridge, also known simply as a 'game cartridge' or 'cartridge', was the physical medium used to distribute games for the Atari 2600 console\n"+
+        "These cartridges contained read-only memory (ROM) chips that stored game code and data, with varied storage capacities typically ranging from 2KB to 32KB\n"+
+        "With their colorful labels and distinctive shapes, Atari 2600 cartridges became iconic symbols of the early video game era.";
+    }
+
     //NES
     private void GrabNES(){
         InteractWithNESConsole.color = Color.green;
         ConsoleImageSlot2NES.SetActive(true);
         ConsoleImageSlot2.SetActive(false);
         ConsoleNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
+        NESConsoleInfo();
     }
+    public void NESConsoleInfo(){
+        ItemDescriptionImage.sprite = NESSprite;
+        ItemDescriptionName.text = "NES";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: July 1983 (Japan), October 1985 (North America), September 1986 (Europe)\n"+
+        "About: The Nintendo Entertainment System (NES) revolutionized the home gaming industry upon its release. Developed by Nintendo, it became one of the best-selling consoles of its time, introducing iconic franchises like 'Super Mario Bros.', 'The Legend of Zelda', and 'Metroid'.\n"+
+        "With its distinctive gray box design and rectangular controller, the NES became an enduring symbol of 1980s pop culture and remains beloved by gamers worldwide.";
+    }
+
     private void GrabNESController(){
         InteractWithNESController.color = Color.green;
         ControllerImageSlot2NES.SetActive(true);
         ControllerImageSlot2.SetActive(false);
         ControllerNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
+        NESControllerInfo();
     }
+    public void NESControllerInfo(){
+        ItemDescriptionImage.sprite = NESControllerSprite;
+        ItemDescriptionName.text = "NES";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "About: The NES controller, also referred to as the 'NES gamepad', was the primary input device for the Nintendo Entertainment System (NES). With its rectangular design housing a directional pad (D-pad), 'Start' and 'Select' buttons, and 'A' and 'B' buttons, it established a benchmark for future console controllers.\n"+
+        "Its straightforward yet efficient layout ensured seamless gameplay control and significantly contributed to the NES's success and the enduring popularity of its iconic game library.";
+    }
+
     private void GrabNESCartridge(){
         InteractWithNESCartridge.color = Color.green;
         CartridgeImageSlot2NES.SetActive(true);
         CartridgeImageSlot2.SetActive(false);
         CartridgeNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
+        NESCartridgeInfo();
+    }
+    public void NESCartridgeInfo(){
+        ItemDescriptionImage.sprite = NESCartridgeSprite;
+        ItemDescriptionName.text = "NES";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "About: The NES cartridge, also known simply as a 'game cartridge' or 'NES cartridge', served as the physical medium for distributing games on the Nintendo Entertainment System (NES). \n"+
+        "Produced by various game developers alongside Nintendo, these cartridges contained read-only memory (ROM) chips storing game code and data.\n"+
+        "They facilitated a diverse range of gaming experiences and played a pivotal role in establishing the NES as one of the most iconic consoles in gaming history.";
     }
 
 

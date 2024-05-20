@@ -1186,6 +1186,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &297539019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297539020}
+  m_Layer: 0
+  m_Name: Atari_cartridge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &297539020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297539019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299565686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2524,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778191800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &783717359 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8045589763379140637, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783717360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 963150328510179708, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783717361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3595060102707385015, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783717362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4208390781564143822, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783717363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &783717364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9124956091819070462, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &822789251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +3965,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2429944296862402162, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
   m_PrefabInstance: {fileID: 8957755147957985297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1341312363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341312364}
+  m_Layer: 0
+  m_Name: Atari_controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1341312364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341312363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372024409 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc43b9a31914e66439654655a4fca59e, type: 3}
@@ -6861,6 +6989,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5819547196445477339, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
   m_PrefabInstance: {fileID: 8957755147957985297}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1942613148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+  m_PrefabInstance: {fileID: 8957755147957985297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189381822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd16f8f030eb3fd4d87a20a8ff02b75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005258776
 GameObject:
   m_ObjectHideFlags: 0
@@ -7583,6 +7722,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1372024409}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: NESSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea21df0d0d2e22d40acf48b94d55bdfb, type: 3}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: DoorCanvas
       value: 
       objectReference: {fileID: 1698653224}
@@ -7643,6 +7786,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 192189192}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: NESCartridgeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6764dc60dbff7e4dafef23f9bfb4493, type: 3}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: CartridgeImageSlot1
       value: 
       objectReference: {fileID: 1292245080}
@@ -7659,6 +7806,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8957755147957985299}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: NESControllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9368e0203efeb148a746e100d0e1f68, type: 3}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: AtariCartridgeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee2946c9a7fe76941944af80dfcff962, type: 3}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: ConsoleImageSlot2NES
       value: 
       objectReference: {fileID: 1155554351}
@@ -7674,6 +7829,10 @@ PrefabInstance:
       propertyPath: ItemDescriptionImage
       value: 
       objectReference: {fileID: 8957755147957985301}
+    - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+      propertyPath: AtariControllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c6235d2b87abca418d25017141c47d8, type: 3}
     - target: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
       propertyPath: CartridgeImageSlot2NES
       value: 
@@ -7727,6 +7886,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+--- !u!114 &5950070212423750989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7484357320651828217, guid: ada9d383ef74e154aab13090edfaa985, type: 3}
+  m_PrefabInstance: {fileID: 5950070212423750988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01259fef081f42a4d97f8662e7f2e0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6510609433672768480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7865,17 +8035,49 @@ PrefabInstance:
       propertyPath: pointer
       value: 
       objectReference: {fileID: 396379503}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: ConsoleNameBtn1
+      value: 
+      objectReference: {fileID: 783717364}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: ConsoleNameBtn2
+      value: 
+      objectReference: {fileID: 783717363}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: checkObjectives
+      value: 
+      objectReference: {fileID: 5950070212423750989}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: CartridgeNameBtn1
+      value: 
+      objectReference: {fileID: 783717360}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: CartridgeNameBtn2
+      value: 
+      objectReference: {fileID: 783717359}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: ControllerNameBtn1
+      value: 
+      objectReference: {fileID: 783717362}
+    - target: {fileID: 3804332345140183104, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: ControllerNameBtn2
+      value: 
+      objectReference: {fileID: 783717361}
     - target: {fileID: 4742443513152655526, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: pointer
       value: 
       objectReference: {fileID: 396379503}
+    - target: {fileID: 4873704633820640430, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5539856552724810389, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: m_Name
       value: ItemDescriptionName
       objectReference: {fileID: 0}
     - target: {fileID: 5647020592500883379, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6028153992698616466, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7917,6 +8119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7095367677468262569, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7324095325059769313, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
       propertyPath: Atari_Cartridge
       value: 
@@ -7925,6 +8131,34 @@ PrefabInstance:
       propertyPath: CustomRightHand_AtariCartridge
       value: 
       objectReference: {fileID: 75083820}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1942613148}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConsoleNameBtn2Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InventoryChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115503976276934449, guid: ca67acaaa24703b4abceab602b9fda93, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7999,3 +8233,5 @@ SceneRoots:
   - {fileID: 5950070212423750988}
   - {fileID: 5568926773504556528}
   - {fileID: 1380090196}
+  - {fileID: 297539020}
+  - {fileID: 1341312364}
