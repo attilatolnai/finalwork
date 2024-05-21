@@ -7,6 +7,15 @@ using OculusSampleFramework;
 
 public class AtariScript : MonoBehaviour
 {
+    //DebugText
+    public TMP_Text DebugText;
+
+    //ITEM COUNTER
+    private bool isAtariCounted = false;
+    private bool isAtariControllerCounted = false;
+    private bool isAtariCartridgeCounted = false;
+    private ItemCounter itemCounter;
+    
     //INFOCANVAS
     public GameObject InfoCanvas;
     public Image ItemDescriptionImage;
@@ -51,6 +60,17 @@ public class AtariScript : MonoBehaviour
 
     void Start()
     {
+        //Init AtariCounter to false
+        isAtariCounted = false;
+
+        //Find ItemCounter
+        itemCounter = FindObjectOfType<ItemCounter>();
+        if (itemCounter == null)
+        {
+            DebugText.text = "ItemCounter not found in the scene";
+            return;
+        }
+        
         // Load sprites from Resources
         AtariSprite = Resources.Load<Sprite>("Images/Atari_console");
         AtariControllerSprite = Resources.Load<Sprite>("Images/Atari_controller");
@@ -61,21 +81,18 @@ public class AtariScript : MonoBehaviour
         InteractWithAtariController.color = Color.white;
         InteractWithAtariCartridge.color = Color.white;
         
-
         // Get 'grabbable' from the gameObjects
         AtariGrabbable = Atari.GetComponent<OVRGrabbable>();
         AtariControllerGrabbable = Atari_Controller.GetComponent<OVRGrabbable>();
         AtariCartridgeGrabbable = Atari_Cartridge.GetComponent<OVRGrabbable>();
         
-
         // Disable images
         ConsoleImageSlot1Atari.SetActive(false);
         ControllerImageSlot1Atari.SetActive(false);
         CartridgeImageSlot1Atari.SetActive(false);
     }
 
-    void Update()
-    {
+    void Update(){
         //CONSOLE
         if (AtariGrabbable.isGrabbed && !isAtariGrabbed){
             GrabAtari();
@@ -111,26 +128,41 @@ public class AtariScript : MonoBehaviour
     //GRAB FUNCTIONS
     private void GrabAtari(){
         InteractWithAtariConsole.color = Color.green;
+        DebugText.text = "Item added to inventory: Atari Console";
         ConsoleImageSlot1Atari.SetActive(true);
         ConsoleImageSlot1.SetActive(false);
         ConsoleNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
         AtariConsoleInfo();
+        if (!isAtariCounted){
+            itemCounter.IncrementCounter();
+            isAtariCounted = true;
+        }
     }
     
     private void GrabAtariController(){
         InteractWithAtariController.color = Color.green;
+        DebugText.text = "Item added to inventory: Atari Controller";
         ControllerImageSlot1Atari.SetActive(true);
         ControllerImageSlot1.SetActive(false);
         ControllerNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
         AtariControllerInfo();
+        if (!isAtariControllerCounted){
+            itemCounter.IncrementCounter();
+            isAtariControllerCounted = true;
+        }
     }
     
     private void GrabAtariCartridge(){
         InteractWithAtariCartridge.color = Color.green;
+        DebugText.text = "Item added to inventory: Atari Cartridge";
         CartridgeImageSlot1Atari.SetActive(true);
         CartridgeImageSlot1.SetActive(false);
         CartridgeNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Atari 2600";
         AtariCartridgeInfo();
+        if (!isAtariCartridgeCounted){
+            itemCounter.IncrementCounter();
+            isAtariCartridgeCounted = true;
+        }
     }
     
 

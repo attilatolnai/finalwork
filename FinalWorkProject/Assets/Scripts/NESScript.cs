@@ -7,6 +7,15 @@ using OculusSampleFramework;
 
 public class NESScript : MonoBehaviour
 {
+    //DebugText
+    public TMP_Text DebugText;
+
+    //ITEM COUNTER
+    private bool isNESCounted = false;
+    private bool isNESControllerCounted = false;
+    private bool isNESCartridgeCounted = false;
+    private ItemCounter itemCounter;
+    
     //INFOCANVAS
     public GameObject InfoCanvas;
     public Image ItemDescriptionImage;
@@ -49,9 +58,11 @@ public class NESScript : MonoBehaviour
     public GameObject CartridgeImageSlot2;
     public GameObject CartridgeImageSlot2NES;
 
-
     void Start()
     {
+        //Find ItemCounter
+        itemCounter = FindObjectOfType<ItemCounter>();
+
         // Load sprites from Resources
         NESSprite = Resources.Load<Sprite>("Images/NES_console");
         NESControllerSprite = Resources.Load<Sprite>("Images/NES_controller");
@@ -110,26 +121,41 @@ public class NESScript : MonoBehaviour
     //GRAB FUNCTIONS
     private void GrabNES(){
         InteractWithNESConsole.color = Color.green;
+        DebugText.text = "Item added to inventory: NES Console";
         ConsoleImageSlot2NES.SetActive(true);
         ConsoleImageSlot2.SetActive(false);
         ConsoleNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
         NESConsoleInfo();
+        if (!isNESCounted){
+            itemCounter.IncrementCounter();
+            isNESCounted = true;
+        }
     }
     
     private void GrabNESController(){
         InteractWithNESController.color = Color.green;
+        DebugText.text = "Item added to inventory: NES Controller";
         ControllerImageSlot2NES.SetActive(true);
         ControllerImageSlot2.SetActive(false);
         ControllerNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
         NESControllerInfo();
+        if (!isNESControllerCounted){
+            itemCounter.IncrementCounter();
+            isNESControllerCounted = true;
+        }
     }
 
     private void GrabNESCartridge(){
         InteractWithNESCartridge.color = Color.green;
+        DebugText.text = "Item added to inventory: NES Cartridge";
         CartridgeImageSlot2NES.SetActive(true);
         CartridgeImageSlot2.SetActive(false);
         CartridgeNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "NES";
         NESCartridgeInfo();
+        if (!isNESCartridgeCounted){
+            itemCounter.IncrementCounter();
+            isNESCartridgeCounted = true;
+        }
     }
     
     // INFO FUNCTIONS
