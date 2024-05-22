@@ -65,11 +65,6 @@ public class AtariScript : MonoBehaviour
 
         //Find ItemCounter
         itemCounter = FindObjectOfType<ItemCounter>();
-        if (itemCounter == null)
-        {
-            DebugText.text = "ItemCounter not found in the scene";
-            return;
-        }
         
         // Load sprites from Resources
         AtariSprite = Resources.Load<Sprite>("Images/Atari_console");

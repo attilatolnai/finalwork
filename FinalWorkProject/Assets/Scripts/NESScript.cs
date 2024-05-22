@@ -59,7 +59,10 @@ public class NESScript : MonoBehaviour
     public GameObject CartridgeImageSlot2NES;
 
     void Start()
-    {
+    {   
+        //Init NESCounter to false
+        isNESCounted = false;
+
         //Find ItemCounter
         itemCounter = FindObjectOfType<ItemCounter>();
 

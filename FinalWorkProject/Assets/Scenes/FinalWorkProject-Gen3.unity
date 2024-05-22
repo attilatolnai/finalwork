@@ -1277,6 +1277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816b74f0841b34f46a62882049d85258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugText: {fileID: 853193134}
   InfoCanvas: {fileID: 8957755147957985302}
   ItemDescriptionImage: {fileID: 8957755147957985301}
   ItemDescriptionName: {fileID: 8957755147957985300}

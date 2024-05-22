@@ -19,6 +19,7 @@ public class ItemCounter : MonoBehaviour
     public void IncrementCounter()
     {
         grabbedItems++;
+        PlayerPrefs.SetInt("GrabbedItemsCount", grabbedItems);//
         UpdateCounterDisplay();
     }
 
