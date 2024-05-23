@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class InventoryPages : MonoBehaviour
 {
     public GameObject InventoryConsoleMenu;
+    public GameObject InventoryControllerMenu;
+    public GameObject InventoryCaseMenu;
+    public GameObject InventoryCartridgeMenu;
     public Button Page1Btn;
     public Button Page2Btn;
     public Button Page3Btn;
@@ -16,8 +19,19 @@ public class InventoryPages : MonoBehaviour
     void Start()
     {
         // Collect all the pages
-        foreach (Transform child in InventoryConsoleMenu.transform)
-        {
+        foreach (Transform child in InventoryConsoleMenu.transform){
+            pages.Add(child);
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in InventoryControllerMenu.transform){
+            pages.Add(child);
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in InventoryCaseMenu.transform){
+            pages.Add(child);
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in InventoryCartridgeMenu.transform){
             pages.Add(child);
             child.gameObject.SetActive(false);
         }
