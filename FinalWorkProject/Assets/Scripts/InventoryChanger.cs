@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class InventoryChanger : MonoBehaviour
 {
+[Header("References System scripts")]
     public AtariScript AtariScript;
     public NESScript NESScript;
     public GenesisScript GenesisScript;
     public SNESScript SNESScript;
-    //Inventory canvases
+    public PS1Script PS1Script;
+    public N64Script N64Script;
+    public SaturnScript SaturnScript;
+[Header("References Inventory Menus")]
     public GameObject InventoryMenu;
     public GameObject InventoryConsoleMenu;
     public GameObject InventoryControllerMenu;
@@ -18,81 +22,34 @@ public class InventoryChanger : MonoBehaviour
     public GameObject InventoryGameMenu;
     public GameObject Inventory_Sidebar;
     public GameObject InfoCanvas;
-    //Buttons inside console menu
+[Header("References ConsoleNameBtn's")]
     public Button ConsoleNameBtn1;
     public Button ConsoleNameBtn2;
-    
     public Button ConsoleNameBtn3;
     public Button ConsoleNameBtn4;
-    /*
     public Button ConsoleNameBtn5;
     public Button ConsoleNameBtn6;
     public Button ConsoleNameBtn7;
-    public Button ConsoleNameBtn8;
-    public Button ConsoleNameBtn9;
-    public Button ConsoleNameBtn10;
-    public Button ConsoleNameBtn11;
-    public Button ConsoleNameBtn12;
-    public Button ConsoleNameBtn13;
-    public Button ConsoleNameBtn14;
-    public Button ConsoleNameBtn15;
-    public Button ConsoleNameBtn16;
-    public Button ConsoleNameBtn17;
-    public Button ConsoleNameBtn18;
-    public Button ConsoleNameBtn19;
-    */
-    //Buttons inside controller menu
+[Header("References ControllerNameBtn's")]
     public Button ControllerNameBtn1;
     public Button ControllerNameBtn2;
-    
     public Button ControllerNameBtn3;
     public Button ControllerNameBtn4;
-    /*
     public Button ControllerNameBtn5;
     public Button ControllerNameBtn6;
     public Button ControllerNameBtn7;
-    public Button ControllerNameBtn8;
-    public Button ControllerNameBtn9;
-    public Button ControllerNameBtn10;
-    public Button ControllerNameBtn11;
-    public Button ControllerNameBtn12;
-    public Button ControllerNameBtn13;
-    public Button ControllerNameBtn14;
-    public Button ControllerNameBtn15;
-    public Button ControllerNameBtn16;
-    public Button ControllerNameBtn17;
-    public Button ControllerNameBtn18;
-    public Button ControllerNameBtn19;
-    */
-    //Buttons inside cartridge menu
+[Header("References CartridgeNameBtn's")]
     public Button CartridgeNameBtn1;
     public Button CartridgeNameBtn2;
-    
     public Button CartridgeNameBtn3;
     public Button CartridgeNameBtn4;
-    /*
     public Button CartridgeNameBtn5;
-    */
-    //Buttons inside case menu
-    /*
+[Header("References CaseNameBtn's")]
     public Button CaseNameBtn1;
     public Button CaseNameBtn2;
-    public Button CaseNameBtn3;
-    public Button CaseNameBtn4;
-    public Button CaseNameBtn5;
-    public Button CaseNameBtn6;
-    public Button CaseNameBtn7;
-    public Button CaseNameBtn8;
-    public Button CaseNameBtn9;
-    public Button CaseNameBtn10;
-    public Button CaseNameBtn11;
-    public Button CaseNameBtn12;
-    public Button CaseNameBtn13;
-    public Button CaseNameBtn14;
-    */
+[Header("References ItemDescriptionReturnBtn")]
     public Button ItemDescriptionReturnBtn;
-
-    //page buttons
+[Header("References Pages")]
     public Button Page1Btn;
     public Button Page2Btn;
     public Button Page3Btn;
@@ -104,18 +61,6 @@ public class InventoryChanger : MonoBehaviour
         InfoCanvas.SetActive(false);
         ItemDescriptionReturnBtn.onClick.AddListener(ReturnButtonClick);
 
-        /*// Initialize pages
-        foreach (Transform child in InventoryConsoleMenu.transform)
-        {
-            pages.Add(child);
-            child.gameObject.SetActive(false);
-        }
-        // Show the first page
-        if (pages.Count > 0)
-        {
-            pages[0].gameObject.SetActive(true);
-        }*/
-
         // Set up button listeners for page buttons
         Page1Btn.onClick.AddListener(() => ShowPage(0));
         Page2Btn.onClick.AddListener(() => ShowPage(1));
@@ -125,19 +70,8 @@ public class InventoryChanger : MonoBehaviour
         SetUpPages(InventoryControllerMenu);
         SetUpPages(InventoryCartridgeMenu);
         SetUpPages(InventoryCaseMenu);
-        /*UpdateButtonState();*/
     }
 
-    /*private void ShowPage(int pageIndex)
-    {
-        if (pageIndex >= 0 && pageIndex < pages.Count)
-        {
-            pages[currentPage].gameObject.SetActive(false);
-            currentPage = pageIndex;
-            pages[currentPage].gameObject.SetActive(true);
-            UpdateButtonState();
-        }
-    }*/
     private void SetUpPages(GameObject menu)
     {
         // Initialize pages
@@ -185,26 +119,12 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         ConsoleNameBtn1.onClick.AddListener(ConsoleNameBtn1Click);
         ConsoleNameBtn2.onClick.AddListener(ConsoleNameBtn2Click);
-        
         ConsoleNameBtn3.onClick.AddListener(ConsoleNameBtn3Click);
         ConsoleNameBtn4.onClick.AddListener(ConsoleNameBtn4Click);
-        /*
         ConsoleNameBtn5.onClick.AddListener(ConsoleNameBtn5Click);
         ConsoleNameBtn6.onClick.AddListener(ConsoleNameBtn6Click);
         ConsoleNameBtn7.onClick.AddListener(ConsoleNameBtn7Click);
-        ConsoleNameBtn8.onClick.AddListener(ConsoleNameBtn8Click);
-        ConsoleNameBtn9.onClick.AddListener(ConsoleNameBtn9Click);
-        ConsoleNameBtn10.onClick.AddListener(ConsoleNameBtn10Click);
-        ConsoleNameBtn11.onClick.AddListener(ConsoleNameBtn11Click);
-        ConsoleNameBtn12.onClick.AddListener(ConsoleNameBtn12Click);
-        ConsoleNameBtn13.onClick.AddListener(ConsoleNameBtn13Click);
-        ConsoleNameBtn14.onClick.AddListener(ConsoleNameBtn14Click);
-        ConsoleNameBtn15.onClick.AddListener(ConsoleNameBtn15Click);
-        ConsoleNameBtn16.onClick.AddListener(ConsoleNameBtn16Click);
-        ConsoleNameBtn17.onClick.AddListener(ConsoleNameBtn17Click);
-        ConsoleNameBtn18.onClick.AddListener(ConsoleNameBtn18Click);
-        ConsoleNameBtn19.onClick.AddListener(ConsoleNameBtn19Click);
-        */
+        
         // Ensure page buttons are active
         Page1Btn.gameObject.SetActive(true);
         Page2Btn.gameObject.SetActive(true);
@@ -223,26 +143,12 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         ControllerNameBtn1.onClick.AddListener(ControllerNameBtn1Click);
         ControllerNameBtn2.onClick.AddListener(ControllerNameBtn2Click);
-        
         ControllerNameBtn3.onClick.AddListener(ControllerNameBtn3Click);
         ControllerNameBtn4.onClick.AddListener(ControllerNameBtn4Click);
-        /*
         ControllerNameBtn5.onClick.AddListener(ControllerNameBtn5Click);
         ControllerNameBtn6.onClick.AddListener(ControllerNameBtn6Click);
         ControllerNameBtn7.onClick.AddListener(ControllerNameBtn7Click);
-        ControllerNameBtn8.onClick.AddListener(ControllerNameBtn8Click);
-        ControllerNameBtn9.onClick.AddListener(ControllerNameBtn9Click);
-        ControllerNameBtn10.onClick.AddListener(ControllerNameBtn10Click);
-        ControllerNameBtn11.onClick.AddListener(ControllerNameBtn11Click);
-        ControllerNameBtn12.onClick.AddListener(ControllerNameBtn12Click);
-        ControllerNameBtn13.onClick.AddListener(ControllerNameBtn13Click);
-        ControllerNameBtn14.onClick.AddListener(ControllerNameBtn14Click);
-        ControllerNameBtn15.onClick.AddListener(ControllerNameBtn15Click);
-        ControllerNameBtn16.onClick.AddListener(ControllerNameBtn16Click);
-        ControllerNameBtn17.onClick.AddListener(ControllerNameBtn17Click);
-        ControllerNameBtn18.onClick.AddListener(ControllerNameBtn18Click);
-        ControllerNameBtn19.onClick.AddListener(ControllerNameBtn19Click);
-        */
+       
         SetUpPages(InventoryControllerMenu);
     }
 
@@ -256,12 +162,9 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         CartridgeNameBtn1.onClick.AddListener(CartridgeNameBtn1Click);
         CartridgeNameBtn2.onClick.AddListener(CartridgeNameBtn2Click);
-        
         CartridgeNameBtn3.onClick.AddListener(CartridgeNameBtn3Click);
         CartridgeNameBtn4.onClick.AddListener(CartridgeNameBtn4Click);
-        /*
         CartridgeNameBtn5.onClick.AddListener(CartridgeNameBtn5Click);
-        */
         SetUpPages(InventoryCartridgeMenu);
     }
 
@@ -273,22 +176,9 @@ public class InventoryChanger : MonoBehaviour
         InventoryCartridgeMenu.SetActive(false);
         InventoryCaseMenu.SetActive(true);
         InventoryGameMenu.SetActive(false);
-        /*
         CaseNameBtn1.onClick.AddListener(CaseNameBtn1Click);
         CaseNameBtn2.onClick.AddListener(CaseNameBtn2Click);
-        CaseNameBtn3.onClick.AddListener(CaseNameBtn3Click);
-        CaseNameBtn4.onClick.AddListener(CaseNameBtn4Click);
-        CaseNameBtn5.onClick.AddListener(CaseNameBtn5Click);
-        CaseNameBtn6.onClick.AddListener(CaseNameBtn6Click);
-        CaseNameBtn7.onClick.AddListener(CaseNameBtn7Click);
-        CaseNameBtn8.onClick.AddListener(CaseNameBtn8Click);
-        CaseNameBtn9.onClick.AddListener(CaseNameBtn9Click);
-        CaseNameBtn10.onClick.AddListener(CaseNameBtn10Click);
-        CaseNameBtn11.onClick.AddListener(CaseNameBtn11Click);
-        CaseNameBtn12.onClick.AddListener(CaseNameBtn12Click);
-        CaseNameBtn13.onClick.AddListener(CaseNameBtn13Click);
-        CaseNameBtn14.onClick.AddListener(CaseNameBtn14Click);
-        */
+        
         SetUpPages(InventoryCaseMenu);
     }
 
@@ -324,83 +214,22 @@ public class InventoryChanger : MonoBehaviour
         SNESScript.SNESConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    
-    /*
     public void ConsoleNameBtn5Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
+        PS1Script.PS1ConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ConsoleNameBtn6Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
+        N64Script.N64ConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ConsoleNameBtn7Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
+        SaturnScript.SaturnConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    public void ConsoleNameBtn8Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn9Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn10Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn11Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn12Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn13Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn14Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn15Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn16Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn17Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn18Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ConsoleNameBtn19Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
-        Inventory_Sidebar.SetActive(false);
-    }*/
+    
 
     //ControllerNameBtnClick-----------------------------------------
     public void ControllerNameBtn1Click(){
@@ -424,83 +253,22 @@ public class InventoryChanger : MonoBehaviour
         SNESScript.SNESControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    
-    /*
     public void ControllerNameBtn5Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
+        PS1Script.PS1ControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ControllerNameBtn6Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
+        N64Script.N64ControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ControllerNameBtn7Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
+        SaturnScript.SaturnControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    public void ControllerNameBtn8Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn9Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn10Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn11Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn12Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn13Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn14Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn15Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn16Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn17Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn18Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void ControllerNameBtn19Click(){
-        InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
-        Inventory_Sidebar.SetActive(false);
-    }*/
+    
 
     //CartridgeNameBtnClick-------------------------------------------
     public void CartridgeNameBtn1Click(){
@@ -513,7 +281,6 @@ public class InventoryChanger : MonoBehaviour
         NESScript.NESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    
     public void CartridgeNameBtn3Click(){
         InfoCanvas.SetActive(true);
         GenesisScript.GenesisCartridgeInfo();
@@ -524,88 +291,24 @@ public class InventoryChanger : MonoBehaviour
         SNESScript.SNESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    
-    /*
     public void CartridgeNameBtn5Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariCartridgeInfo();
+        N64Script.N64CartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    */
+
     //CaseNameBtnClick------------------------------------------------
-    /*
     public void CaseNameBtn1Click(){
         InfoCanvas.SetActive(true);
-        //
+        PS1Script.PS1CaseInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void CaseNameBtn2Click(){
         InfoCanvas.SetActive(true);
-        //
+        SaturnScript.SaturnCaseInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    public void CaseNameBtn3Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn4Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn5Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn6Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn7Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn8Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn9Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn10Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn11Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn12Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn13Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    public void CaseNameBtn14Click(){
-        InfoCanvas.SetActive(true);
-        //
-        Inventory_Sidebar.SetActive(false);
-    }
-    */
-
+    
     //ReturnBtnClick--------------------------------------------------
     public void ReturnButtonClick()
     {

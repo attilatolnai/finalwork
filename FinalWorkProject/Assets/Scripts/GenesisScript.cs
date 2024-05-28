@@ -14,7 +14,7 @@ public class GenesisScript : MonoBehaviour
     private bool isGenesisCounted = false;
     private bool isGenesisControllerCounted = false;
     private bool isGenesisCartridgeCounted = false;
-    private ItemCounter itemCounter;
+    private ItemCounterGenesis ItemCounterGenesis;
 [Header("Refrences Info Canvas")]
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -64,7 +64,7 @@ public class GenesisScript : MonoBehaviour
         isGenesisCounted = false;
 
         //Find ItemCounter
-        itemCounter = FindObjectOfType<ItemCounter>();
+        ItemCounterGenesis = FindObjectOfType<ItemCounterGenesis>();
         
         // Load sprites from Resources
         GenesisSprite = Resources.Load<Sprite>("Images/Genesis_console");
@@ -129,7 +129,7 @@ public class GenesisScript : MonoBehaviour
         ConsoleNameBtn3.GetComponentInChildren<TextMeshProUGUI>().text = "Genesis";
         GenesisConsoleInfo();
         if (!isGenesisCounted){
-            //itemCounter.IncrementCounter();
+            ItemCounterGenesis.IncrementCounterGenesis();
             isGenesisCounted = true;
         }
     }
@@ -141,7 +141,7 @@ public class GenesisScript : MonoBehaviour
         ControllerNameBtn3.GetComponentInChildren<TextMeshProUGUI>().text = "Genesis";
         GenesisControllerInfo();
         if (!isGenesisControllerCounted){
-            //itemCounter.IncrementCounter();
+            ItemCounterGenesis.IncrementCounterGenesis();
             isGenesisControllerCounted = true;
         }
     }
@@ -154,7 +154,7 @@ public class GenesisScript : MonoBehaviour
         CartridgeNameBtn3.GetComponentInChildren<TextMeshProUGUI>().text = "Genesis";
         GenesisCartridgeInfo();
         if (!isGenesisCartridgeCounted){
-            //itemCounter.IncrementCounter();
+            ItemCounterGenesis.IncrementCounterGenesis();
             isGenesisCartridgeCounted = true;
         }
     }

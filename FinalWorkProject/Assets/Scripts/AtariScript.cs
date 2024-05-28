@@ -9,26 +9,26 @@ public class AtariScript : MonoBehaviour
 {
     //DebugText
     public TMP_Text DebugText;
-
+[Header("References Item Counter")]
     //ITEM COUNTER
     private bool isAtariCounted = false;
     private bool isAtariControllerCounted = false;
     private bool isAtariCartridgeCounted = false;
     private ItemCounter itemCounter;
     private ItemCounterAtari itemCounterAtari;
-    
+[Header("References Info Canvas")]
     //INFOCANVAS
     public GameObject InfoCanvas;
     public Image ItemDescriptionImage;
     public TMP_Text ItemDescriptionName;
     public TMP_Text ItemDescriptionText;
     public Button ItemDescriptionReturnBtn;
-
+[Header("References Sprites")]
     //ATARI SPRITES
     public Sprite AtariSprite;
     public Sprite AtariControllerSprite;
     public Sprite AtariCartridgeSprite;
-
+[Header("Console")]
     //CONSOLE
     public TMP_Text InteractWithAtariConsole;
     public GameObject Atari;
@@ -38,7 +38,7 @@ public class AtariScript : MonoBehaviour
     public TMP_Text ConsoleNameBtn1;
     public GameObject ConsoleImageSlot1;
     public GameObject ConsoleImageSlot1Atari;
-
+[Header("Controller")]
     //CONTROLLER
     public TMP_Text InteractWithAtariController;
     public GameObject Atari_Controller;
@@ -48,7 +48,7 @@ public class AtariScript : MonoBehaviour
     public TMP_Text ControllerNameBtn1;
     public GameObject ControllerImageSlot1;
     public GameObject ControllerImageSlot1Atari;
-
+[Header("Cartridge")]
     //CARTRIDGE
     public TMP_Text InteractWithAtariCartridge;
     public GameObject Atari_Cartridge;
