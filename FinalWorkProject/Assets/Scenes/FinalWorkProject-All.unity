@@ -7756,6 +7756,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4329583507244671210, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94bf1b61f5e91384a8eab3f56c8f43f4, type: 3}
     - target: {fileID: 4367878432695479145, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
       propertyPath: m_text
       value: Saturn
