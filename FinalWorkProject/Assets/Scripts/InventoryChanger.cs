@@ -7,6 +7,8 @@ public class InventoryChanger : MonoBehaviour
 {
     public AtariScript AtariScript;
     public NESScript NESScript;
+    public GenesisScript GenesisScript;
+    public SNESScript SNESScript;
     //Inventory canvases
     public GameObject InventoryMenu;
     public GameObject InventoryConsoleMenu;
@@ -19,9 +21,10 @@ public class InventoryChanger : MonoBehaviour
     //Buttons inside console menu
     public Button ConsoleNameBtn1;
     public Button ConsoleNameBtn2;
-    /*
+    
     public Button ConsoleNameBtn3;
     public Button ConsoleNameBtn4;
+    /*
     public Button ConsoleNameBtn5;
     public Button ConsoleNameBtn6;
     public Button ConsoleNameBtn7;
@@ -41,9 +44,10 @@ public class InventoryChanger : MonoBehaviour
     //Buttons inside controller menu
     public Button ControllerNameBtn1;
     public Button ControllerNameBtn2;
-    /*
+    
     public Button ControllerNameBtn3;
     public Button ControllerNameBtn4;
+    /*
     public Button ControllerNameBtn5;
     public Button ControllerNameBtn6;
     public Button ControllerNameBtn7;
@@ -63,9 +67,10 @@ public class InventoryChanger : MonoBehaviour
     //Buttons inside cartridge menu
     public Button CartridgeNameBtn1;
     public Button CartridgeNameBtn2;
-    /*
+    
     public Button CartridgeNameBtn3;
     public Button CartridgeNameBtn4;
+    /*
     public Button CartridgeNameBtn5;
     */
     //Buttons inside case menu
@@ -180,9 +185,10 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         ConsoleNameBtn1.onClick.AddListener(ConsoleNameBtn1Click);
         ConsoleNameBtn2.onClick.AddListener(ConsoleNameBtn2Click);
-        /*
+        
         ConsoleNameBtn3.onClick.AddListener(ConsoleNameBtn3Click);
         ConsoleNameBtn4.onClick.AddListener(ConsoleNameBtn4Click);
+        /*
         ConsoleNameBtn5.onClick.AddListener(ConsoleNameBtn5Click);
         ConsoleNameBtn6.onClick.AddListener(ConsoleNameBtn6Click);
         ConsoleNameBtn7.onClick.AddListener(ConsoleNameBtn7Click);
@@ -217,9 +223,10 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         ControllerNameBtn1.onClick.AddListener(ControllerNameBtn1Click);
         ControllerNameBtn2.onClick.AddListener(ControllerNameBtn2Click);
-        /*
+        
         ControllerNameBtn3.onClick.AddListener(ControllerNameBtn3Click);
         ControllerNameBtn4.onClick.AddListener(ControllerNameBtn4Click);
+        /*
         ControllerNameBtn5.onClick.AddListener(ControllerNameBtn5Click);
         ControllerNameBtn6.onClick.AddListener(ControllerNameBtn6Click);
         ControllerNameBtn7.onClick.AddListener(ControllerNameBtn7Click);
@@ -249,9 +256,10 @@ public class InventoryChanger : MonoBehaviour
         InventoryGameMenu.SetActive(false);
         CartridgeNameBtn1.onClick.AddListener(CartridgeNameBtn1Click);
         CartridgeNameBtn2.onClick.AddListener(CartridgeNameBtn2Click);
-        /*
+        
         CartridgeNameBtn3.onClick.AddListener(CartridgeNameBtn3Click);
         CartridgeNameBtn4.onClick.AddListener(CartridgeNameBtn4Click);
+        /*
         CartridgeNameBtn5.onClick.AddListener(CartridgeNameBtn5Click);
         */
         SetUpPages(InventoryCartridgeMenu);
@@ -305,17 +313,19 @@ public class InventoryChanger : MonoBehaviour
         NESScript.NESConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    /*
+    
     public void ConsoleNameBtn3Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
+        GenesisScript.GenesisConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ConsoleNameBtn4Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariConsoleInfo();
+        SNESScript.SNESConsoleInfo();
         Inventory_Sidebar.SetActive(false);
     }
+    
+    /*
     public void ConsoleNameBtn5Click(){
         InfoCanvas.SetActive(true);
         AtariScript.AtariConsoleInfo();
@@ -403,17 +413,19 @@ public class InventoryChanger : MonoBehaviour
         NESScript.NESControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
-    /*
+    
     public void ControllerNameBtn3Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
+        GenesisScript.GenesisControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void ControllerNameBtn4Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariControllerInfo();
+        SNESScript.SNESControllerInfo();
         Inventory_Sidebar.SetActive(false);
     }
+    
+    /*
     public void ControllerNameBtn5Click(){
         InfoCanvas.SetActive(true);
         AtariScript.AtariControllerInfo();
@@ -501,22 +513,25 @@ public class InventoryChanger : MonoBehaviour
         NESScript.NESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
+    
     public void CartridgeNameBtn3Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariCartridgeInfo();
+        GenesisScript.GenesisCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
     public void CartridgeNameBtn4Click(){
         InfoCanvas.SetActive(true);
-        AtariScript.AtariCartridgeInfo();
+        SNESScript.SNESCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
+    
+    /*
     public void CartridgeNameBtn5Click(){
         InfoCanvas.SetActive(true);
         AtariScript.AtariCartridgeInfo();
         Inventory_Sidebar.SetActive(false);
     }
-
+    */
     //CaseNameBtnClick------------------------------------------------
     /*
     public void CaseNameBtn1Click(){

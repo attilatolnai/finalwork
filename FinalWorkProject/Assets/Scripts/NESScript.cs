@@ -15,6 +15,7 @@ public class NESScript : MonoBehaviour
     private bool isNESControllerCounted = false;
     private bool isNESCartridgeCounted = false;
     private ItemCounter itemCounter;
+    private ItemCounterNES itemCounterNES;
     
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -65,6 +66,7 @@ public class NESScript : MonoBehaviour
 
         //Find ItemCounter
         itemCounter = FindObjectOfType<ItemCounter>();
+        itemCounterNES = FindObjectOfType<ItemCounterNES>();
 
         // Load sprites from Resources
         NESSprite = Resources.Load<Sprite>("Images/NES_console");
@@ -131,6 +133,7 @@ public class NESScript : MonoBehaviour
         NESConsoleInfo();
         if (!isNESCounted){
             itemCounter.IncrementCounter();
+            itemCounterNES.IncrementCounterNES();
             isNESCounted = true;
         }
     }
@@ -144,6 +147,7 @@ public class NESScript : MonoBehaviour
         NESControllerInfo();
         if (!isNESControllerCounted){
             itemCounter.IncrementCounter();
+            itemCounterNES.IncrementCounterNES();
             isNESControllerCounted = true;
         }
     }
@@ -157,6 +161,7 @@ public class NESScript : MonoBehaviour
         NESCartridgeInfo();
         if (!isNESCartridgeCounted){
             itemCounter.IncrementCounter();
+            itemCounterNES.IncrementCounterNES();
             isNESCartridgeCounted = true;
         }
     }

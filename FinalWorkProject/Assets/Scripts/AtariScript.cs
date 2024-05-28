@@ -15,6 +15,7 @@ public class AtariScript : MonoBehaviour
     private bool isAtariControllerCounted = false;
     private bool isAtariCartridgeCounted = false;
     private ItemCounter itemCounter;
+    private ItemCounterAtari itemCounterAtari;
     
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -65,6 +66,7 @@ public class AtariScript : MonoBehaviour
 
         //Find ItemCounter
         itemCounter = FindObjectOfType<ItemCounter>();
+        itemCounterAtari = FindObjectOfType<ItemCounterAtari>();
         
         // Load sprites from Resources
         AtariSprite = Resources.Load<Sprite>("Images/Atari_console");
@@ -130,6 +132,7 @@ public class AtariScript : MonoBehaviour
         AtariConsoleInfo();
         if (!isAtariCounted){
             itemCounter.IncrementCounter();
+            itemCounterAtari.IncrementCounterAtari();
             isAtariCounted = true;
         }
     }
@@ -143,6 +146,7 @@ public class AtariScript : MonoBehaviour
         AtariControllerInfo();
         if (!isAtariControllerCounted){
             itemCounter.IncrementCounter();
+            itemCounterAtari.IncrementCounterAtari();
             isAtariControllerCounted = true;
         }
     }
@@ -156,6 +160,7 @@ public class AtariScript : MonoBehaviour
         AtariCartridgeInfo();
         if (!isAtariCartridgeCounted){
             itemCounter.IncrementCounter();
+            itemCounterAtari.IncrementCounterAtari();
             isAtariCartridgeCounted = true;
         }
     }

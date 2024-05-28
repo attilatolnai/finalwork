@@ -7,10 +7,17 @@ using OculusSampleFramework;
 
 public class CheckObjectives : MonoBehaviour
 {
+    //DebugText
+    public TMP_Text CompletedText;
+
     //CANVAS
     public GameObject DoorCanvas;
-    public AtariScript atariScript;
-    public NESScript nesScript;
+    public AtariScript AtariScript;
+    public NESScript NESScript;
+    /*
+    public GenesisScript GenesisScript;
+    public SNESScript SNESScript;
+    */
 
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -23,7 +30,7 @@ public class CheckObjectives : MonoBehaviour
     {
 
         // Disable DoorCanvas
-        DoorCanvas.SetActive(false);
+        DoorCanvas.SetActive(true);
 
         // Disable InfoCanvas
         InfoCanvas.SetActive(false);
@@ -39,18 +46,35 @@ public class CheckObjectives : MonoBehaviour
     {
         //Check if all objectives have been completed
         if (CheckAllObjectivesDone()){
-            DoorCanvas.SetActive(true);
+            CompletedText.text = "Congratulations! You completed Room 1!";
         }
+        /*
+        if (CheckAllObjectivesDoneGen4()){
+            CompletedText.text = "Congratulations! You completed Room 2!";
+        }
+        */
     }
 
     private bool CheckAllObjectivesDone()
     {
         // Check if all objectives are done
-        return atariScript.InteractWithAtariConsole.color == Color.green &&
-               atariScript.InteractWithAtariController.color == Color.green &&
-               atariScript.InteractWithAtariCartridge.color == Color.green &&
-               nesScript.InteractWithNESConsole.color == Color.green &&
-               nesScript.InteractWithNESController.color == Color.green &&
-               nesScript.InteractWithNESCartridge.color == Color.green;
+        return AtariScript.InteractWithAtariConsole.color == Color.green &&
+               AtariScript.InteractWithAtariController.color == Color.green &&
+               AtariScript.InteractWithAtariCartridge.color == Color.green &&
+               NESScript.InteractWithNESConsole.color == Color.green &&
+               NESScript.InteractWithNESController.color == Color.green &&
+               NESScript.InteractWithNESCartridge.color == Color.green;
     }
+    /*
+    private bool CheckAllObjectivesDoneGen4()
+    {
+        // Check if all objectives are done
+        return GenesisScript.InteractWithGenesisConsole.color == Color.green &&
+               GenesisScript.InteractWithGenesisController.color == Color.green &&
+               GenesisScript.InteractWithGenesisCartridge.color == Color.green &&
+               SNESScript.InteractWithSNESConsole.color == Color.green &&
+               SNESScript.InteractWithSNESController.color == Color.green &&
+               SNESScript.InteractWithSNESCartridge.color == Color.green;
+    }
+    */
 }
