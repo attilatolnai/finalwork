@@ -1,0 +1,333 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3059693385639609246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420529197188609817}
+  - component: {fileID: 6063508989214651877}
+  - component: {fileID: 7226033237766402782}
+  - component: {fileID: 3147890919197605713}
+  - component: {fileID: 8802450265053505017}
+  - component: {fileID: 2739889221103411420}
+  - component: {fileID: 6769876508154964474}
+  - component: {fileID: 5697963516220112414}
+  - component: {fileID: 4119679636162080107}
+  - component: {fileID: 270517566082519971}
+  - component: {fileID: 6843514267553040374}
+  - component: {fileID: 5695090271568085796}
+  - component: {fileID: 1056451948926672359}
+  - component: {fileID: 4987245814685674052}
+  - component: {fileID: 5990622129456692400}
+  - component: {fileID: 4472187986977770571}
+  - component: {fileID: 5209117242236279949}
+  - component: {fileID: 6758888803266759784}
+  - component: {fileID: 8054138462669986371}
+  - component: {fileID: 7610983524048245671}
+  - component: {fileID: 7008933895585030423}
+  m_Layer: 0
+  m_Name: Counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1420529197188609817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5084548, y: 3.9475021, z: -6.1870847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6063508989214651877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a88a7baf6a807a42897787a58a6a334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpAtari: {fileID: 0}
+  totalItemsAtari: 3
+--- !u!114 &7226033237766402782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7b277cc51102342a21aac3fe42c891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpNES: {fileID: 0}
+  totalItemsNES: 3
+--- !u!114 &3147890919197605713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f0972e8b43c6e40abf44f85618f645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpN64: {fileID: 0}
+  totalItemsN64: 3
+--- !u!114 &8802450265053505017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f7205321111a049a577ed8fe2593e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpSaturn: {fileID: 0}
+  totalItemsSaturn: 3
+--- !u!114 &2739889221103411420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ccdae6f59dfd74e91d6829826a5fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpPS1: {fileID: 0}
+  totalItemsPS1: 3
+--- !u!114 &6769876508154964474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b05052d932ffe489c95ae4f70b1676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpGenesis: {fileID: 0}
+  totalItemsGenesis: 3
+--- !u!114 &5697963516220112414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d8257955e117c4eb77c64234e97f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpSNES: {fileID: 0}
+  totalItemsSNES: 3
+--- !u!114 &4119679636162080107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e00fc6d43a428f4f8cbfa4fab5a3bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUp: {fileID: 0}
+  totalItems: 6
+--- !u!114 &270517566082519971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150d376674285904fbc815cfea695352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpPS2: {fileID: 0}
+  totalItemsPS2: 3
+--- !u!114 &6843514267553040374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e9ceec0d3fd8a44b317e6eb66c6aa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpGamecube: {fileID: 0}
+  totalItemsGamecube: 3
+--- !u!114 &5695090271568085796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144d6a4b96f06194f96a77bb39944937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpDreamcast: {fileID: 0}
+  totalItemsDreamcast: 3
+--- !u!114 &1056451948926672359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4de5ced6c979745960a68e347de024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpXbox: {fileID: 0}
+  totalItemsXbox: 3
+--- !u!114 &4987245814685674052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d20733a875592045a608b0635334221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpPS3: {fileID: 0}
+  totalItemsPS3: 3
+--- !u!114 &5990622129456692400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d65811dbe00cab46bad23b398da75ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpWii: {fileID: 0}
+  totalItemsWii: 3
+--- !u!114 &4472187986977770571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec49454fb37eb654986754591b67b7ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpXbox360: {fileID: 0}
+  totalItemsXbox360: 3
+--- !u!114 &5209117242236279949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dc5a2a8a2b5d541b7881d1e8481e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpPS4: {fileID: 0}
+  totalItemsPS4: 3
+--- !u!114 &6758888803266759784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a1519393c4ba84a9b802aac858d475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpXboxOne: {fileID: 0}
+  totalItemsXboxOne: 3
+--- !u!114 &8054138462669986371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78570e955118cf478500ded9c00a9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpSwitch: {fileID: 0}
+  totalItemsSwitch: 3
+--- !u!114 &7610983524048245671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd87ecc512a15b4183fe2cc347953ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpPS5: {fileID: 0}
+  totalItemsPS5: 3
+--- !u!114 &7008933895585030423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059693385639609246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdad7d8bf04e8c49a010192580fc1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterUpXboxSeries: {fileID: 0}
+  totalItemsXboxSeries: 3
