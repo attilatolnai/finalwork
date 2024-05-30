@@ -7,11 +7,11 @@ public class MenuControllerTimeline : MonoBehaviour
 {
     public void GoTo1989()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen3");
+        SceneManager.LoadScene("Gen3");
     }
     public void GoTo1995()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen4");
+        SceneManager.LoadScene("Gen4");
     }
     public void GoTo1998()
     {
@@ -35,6 +35,6 @@ public class MenuControllerTimeline : MonoBehaviour
     }
     public void GoToMuseum()
     {
-        SceneManager.LoadScene("FinalWorkProject-All");
+        SceneManager.LoadScene("Museum");
     }
 }

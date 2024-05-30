@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public void StartBtn(){
-        SceneManager.LoadScene("FinalWorkProject-Gen3");
+        SceneManager.LoadScene("Gen3");
     }
     public void TimelineBtn(){
         SceneManager.LoadScene("Timeline");
     }
     public void MuseumBtn(){
-        SceneManager.LoadScene("FinalWorkProject-All");
+        SceneManager.LoadScene("Museum");
     }
 }

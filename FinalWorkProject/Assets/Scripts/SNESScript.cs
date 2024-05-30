@@ -14,6 +14,7 @@ public class SNESScript : MonoBehaviour
     private bool isSNESCounted = false;
     private bool isSNESControllerCounted = false;
     private bool isSNESCartridgeCounted = false;
+    private ItemCounterGen4 itemCounterGen4;
     private ItemCounterSNES ItemCounterSNES;
 [Header("Refrences Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class SNESScript : MonoBehaviour
         isSNESCounted = false;
 
         //Find ItemCounter
+        itemCounterGen4 = FindObjectOfType<ItemCounterGen4>();
         ItemCounterSNES = FindObjectOfType<ItemCounterSNES>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class SNESScript : MonoBehaviour
         ConsoleNameBtn4.GetComponentInChildren<TextMeshProUGUI>().text = "SNES";
         SNESConsoleInfo();
         if (!isSNESCounted){
+            itemCounterGen4.IncrementCounterGen4();
             ItemCounterSNES.IncrementCounterSNES();
             isSNESCounted = true;
         }
@@ -141,6 +144,7 @@ public class SNESScript : MonoBehaviour
         ControllerNameBtn4.GetComponentInChildren<TextMeshProUGUI>().text = "SNES";
         SNESControllerInfo();
         if (!isSNESControllerCounted){
+            itemCounterGen4.IncrementCounterGen4();
             ItemCounterSNES.IncrementCounterSNES();
             isSNESControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class SNESScript : MonoBehaviour
         CartridgeNameBtn4.GetComponentInChildren<TextMeshProUGUI>().text = "SNES";
         SNESCartridgeInfo();
         if (!isSNESCartridgeCounted){
+            itemCounterGen4.IncrementCounterGen4();
             ItemCounterSNES.IncrementCounterSNES();
             isSNESCartridgeCounted = true;
         }

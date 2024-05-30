@@ -12,9 +12,11 @@ public class CheckObjectivesGen4 : MonoBehaviour
 
     //CANVAS
     public GameObject DoorCanvas;
+    public GameObject TVCanvas;
+    
+    //SCRIPTS
     public GenesisScript GenesisScript;
     public SNESScript SNESScript;
-    
 
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -25,9 +27,10 @@ public class CheckObjectivesGen4 : MonoBehaviour
 
     private void Start()
     {
-
-        // Disable DoorCanvas
         DoorCanvas.SetActive(true);
+
+        // Disable TVCanvas
+        TVCanvas.SetActive(false);
 
         // Disable InfoCanvas
         InfoCanvas.SetActive(false);
@@ -36,7 +39,6 @@ public class CheckObjectivesGen4 : MonoBehaviour
         ItemDescriptionImage.sprite = null;
         ItemDescriptionName.text = "???";
         ItemDescriptionText.text = "???";
-
     }
 
     private void Update()
@@ -44,6 +46,7 @@ public class CheckObjectivesGen4 : MonoBehaviour
         //Check if all objectives have been completed
         if (CheckAllObjectivesDoneGen4()){
             CompletedText.text = "Congratulations! You completed Room 2!";
+            TVCanvas.SetActive(true);
         }
     }
     

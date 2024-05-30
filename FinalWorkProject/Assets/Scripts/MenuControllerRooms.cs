@@ -7,7 +7,7 @@ public class MenuControllerRooms : MonoBehaviour
 {
     public void GoToGen4()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen4");
+        SceneManager.LoadScene("Gen4");
     }
     public void GoToGen5()
     {
@@ -29,9 +29,9 @@ public class MenuControllerRooms : MonoBehaviour
     {
         SceneManager.LoadScene("FinalWorkProject-Gen9");
     }
-    public void GoToAllGen()
+    public void GoToMuseum()
     {
-        SceneManager.LoadScene("FinalWorkProject-All");
+        SceneManager.LoadScene("Museum");
     }
     public void GoToMenu()
     {
