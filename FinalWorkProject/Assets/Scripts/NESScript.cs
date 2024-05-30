@@ -10,26 +10,23 @@ public class NESScript : MonoBehaviour
     //DebugText
     public TMP_Text DebugText;
 
-    //ITEM COUNTER
+[Header("References Item Counter")]
     private bool isNESCounted = false;
     private bool isNESControllerCounted = false;
     private bool isNESCartridgeCounted = false;
     private ItemCounter itemCounter;
     private ItemCounterNES itemCounterNES;
-    
-    //INFOCANVAS
+[Header("References Info Canvas")]
     public GameObject InfoCanvas;
     public Image ItemDescriptionImage;
     public TMP_Text ItemDescriptionName;
     public TMP_Text ItemDescriptionText;
     public Button ItemDescriptionReturnBtn;
-
-    //NES SPRITES
+[Header("References Sprites")]
     public Sprite NESSprite;
     public Sprite NESControllerSprite;
     public Sprite NESCartridgeSprite;
-
-    //CONSOLE
+[Header("Console")]
     public TMP_Text InteractWithNESConsole;
     public GameObject NES;
     private OVRGrabbable NESGrabbable;
@@ -38,8 +35,7 @@ public class NESScript : MonoBehaviour
     public TMP_Text ConsoleNameBtn2;
     public GameObject ConsoleImageSlot2;
     public GameObject ConsoleImageSlot2NES;
-
-    //CONTROLLER
+[Header("Controller")]
     public TMP_Text InteractWithNESController;
     public GameObject NES_Controller;
     private OVRGrabbable NESControllerGrabbable;
@@ -48,8 +44,7 @@ public class NESScript : MonoBehaviour
     public TMP_Text ControllerNameBtn2;
     public GameObject ControllerImageSlot2;
     public GameObject ControllerImageSlot2NES;
-
-    //CARTRIDGE
+[Header("Cartridge")]
     public TMP_Text InteractWithNESCartridge;
     public GameObject NES_Cartridge;
     private OVRGrabbable NESCartridgeGrabbable;

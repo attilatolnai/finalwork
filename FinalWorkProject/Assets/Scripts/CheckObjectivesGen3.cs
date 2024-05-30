@@ -17,7 +17,6 @@ public class CheckObjectivesGen3 : MonoBehaviour
     public GameObject TVCanvasAtari;
     public GameObject TVCanvasNES;
     
-
     //SCRIPTS
     public AtariScript AtariScript;
     public NESScript NESScript;

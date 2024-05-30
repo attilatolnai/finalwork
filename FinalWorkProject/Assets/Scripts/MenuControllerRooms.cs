@@ -11,23 +11,23 @@ public class MenuControllerRooms : MonoBehaviour
     }
     public void GoToGen5()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen5");
+        SceneManager.LoadScene("Gen5");
     }
     public void GoToGen6()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen6");
+        SceneManager.LoadScene("Gen6");
     }
     public void GoToGen7()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen7");
+        SceneManager.LoadScene("Gen7");
     }
     public void GoToGen8()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen8");
+        SceneManager.LoadScene("Gen8");
     }
     public void GoToGen9()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen9");
+        SceneManager.LoadScene("Gen9");
     }
     public void GoToMuseum()
     {

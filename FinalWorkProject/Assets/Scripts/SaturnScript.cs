@@ -14,6 +14,7 @@ public class SaturnScript : MonoBehaviour
     private bool isSaturnCounted = false;
     private bool isSaturnControllerCounted = false;
     private bool isSaturnCaseCounted = false;
+    private ItemCounterGen5 ItemCounterGen5;
     private ItemCounterSaturn ItemCounterSaturn;
 [Header("Refrences Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class SaturnScript : MonoBehaviour
         isSaturnCounted = false;
 
         //Find ItemCounter
+        ItemCounterGen5 = FindObjectOfType<ItemCounterGen5>();
         ItemCounterSaturn = FindObjectOfType<ItemCounterSaturn>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class SaturnScript : MonoBehaviour
         ConsoleNameBtn7.GetComponentInChildren<TextMeshProUGUI>().text = "Saturn";
         SaturnConsoleInfo();
         if (!isSaturnCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterSaturn.IncrementCounterSaturn();
             isSaturnCounted = true;
         }
@@ -141,6 +144,7 @@ public class SaturnScript : MonoBehaviour
         ControllerNameBtn7.GetComponentInChildren<TextMeshProUGUI>().text = "Saturn";
         SaturnControllerInfo();
         if (!isSaturnControllerCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterSaturn.IncrementCounterSaturn();
             isSaturnControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class SaturnScript : MonoBehaviour
         CaseNameBtn1.GetComponentInChildren<TextMeshProUGUI>().text = "Saturn";
         SaturnCaseInfo();
         if (!isSaturnCaseCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterSaturn.IncrementCounterSaturn();
             isSaturnCaseCounted = true;
         }

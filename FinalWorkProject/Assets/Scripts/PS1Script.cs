@@ -15,6 +15,7 @@ public class PS1Script : MonoBehaviour
     private bool isPS1ControllerCounted = false;
     private bool isPS1CaseCounted = false;
     private ItemCounterPS1 ItemCounterPS1;
+    private ItemCounterGen5 ItemCounterGen5;
 [Header("References Info Canvas")]
     //INFOCANVAS
     public GameObject InfoCanvas;
@@ -64,7 +65,9 @@ public class PS1Script : MonoBehaviour
         isPS1Counted = false;
 
         //Find ItemCounter
+        
         ItemCounterPS1 = FindObjectOfType<ItemCounterPS1>();
+        ItemCounterGen5 = FindObjectOfType<ItemCounterGen5>();
         
         // Load sprites from Resources
         PS1Sprite = Resources.Load<Sprite>("Images/PS1_console");
@@ -129,6 +132,7 @@ public class PS1Script : MonoBehaviour
         ConsoleNameBtn5.GetComponentInChildren<TextMeshProUGUI>().text = "PS1";
         PS1ConsoleInfo();
         if (!isPS1Counted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterPS1.IncrementCounterPS1();
             isPS1Counted = true;
         }
@@ -141,6 +145,7 @@ public class PS1Script : MonoBehaviour
         ControllerNameBtn5.GetComponentInChildren<TextMeshProUGUI>().text = "PS1";
         PS1ControllerInfo();
         if (!isPS1ControllerCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterPS1.IncrementCounterPS1();
             isPS1ControllerCounted = true;
         }
@@ -154,6 +159,7 @@ public class PS1Script : MonoBehaviour
         CaseNameBtn2.GetComponentInChildren<TextMeshProUGUI>().text = "PS1";
         PS1CaseInfo();
         if (!isPS1CaseCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterPS1.IncrementCounterPS1();
             isPS1CaseCounted = true;
         }

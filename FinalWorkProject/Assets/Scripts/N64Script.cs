@@ -14,6 +14,7 @@ public class N64Script : MonoBehaviour
     private bool isN64Counted = false;
     private bool isN64ControllerCounted = false;
     private bool isN64CartridgeCounted = false;
+    private ItemCounterGen5 ItemCounterGen5;
     private ItemCounterN64 ItemCounterN64;
 [Header("Refrences Info Canvas")]
     //INFOCANVAS
@@ -64,7 +65,9 @@ public class N64Script : MonoBehaviour
         isN64Counted = false;
 
         //Find ItemCounter
+        ItemCounterGen5 = FindObjectOfType<ItemCounterGen5>();
         ItemCounterN64 = FindObjectOfType<ItemCounterN64>();
+        
         
         // Load sprites from Resources
         N64Sprite = Resources.Load<Sprite>("Images/N64_console");
@@ -129,6 +132,7 @@ public class N64Script : MonoBehaviour
         ConsoleNameBtn6.GetComponentInChildren<TextMeshProUGUI>().text = "N64";
         N64ConsoleInfo();
         if (!isN64Counted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterN64.IncrementCounterN64();
             isN64Counted = true;
         }
@@ -141,6 +145,7 @@ public class N64Script : MonoBehaviour
         ControllerNameBtn6.GetComponentInChildren<TextMeshProUGUI>().text = "N64";
         N64ControllerInfo();
         if (!isN64ControllerCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterN64.IncrementCounterN64();
             isN64ControllerCounted = true;
         }
@@ -154,6 +159,7 @@ public class N64Script : MonoBehaviour
         CartridgeNameBtn5.GetComponentInChildren<TextMeshProUGUI>().text = "N64";
         N64CartridgeInfo();
         if (!isN64CartridgeCounted){
+            ItemCounterGen5.IncrementCounterGen5();
             ItemCounterN64.IncrementCounterN64();
             isN64CartridgeCounted = true;
         }

@@ -15,23 +15,23 @@ public class MenuControllerTimeline : MonoBehaviour
     }
     public void GoTo1998()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen5");
+        SceneManager.LoadScene("Gen5");
     }
     public void GoTo2003()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen6");
+        SceneManager.LoadScene("Gen6");
     }
     public void GoTo2010()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen7");
+        SceneManager.LoadScene("Gen7");
     }
     public void GoTo2017()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen8");
+        SceneManager.LoadScene("Gen8");
     }
     public void GoTo2024()
     {
-        SceneManager.LoadScene("FinalWorkProject-Gen9");
+        SceneManager.LoadScene("Gen9");
     }
     public void GoToMuseum()
     {

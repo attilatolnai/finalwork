@@ -15,21 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Gen4.unity
     guid: 90b9851144c1a554f92c1db970ae2baa
   - enabled: 1
+    path: Assets/Scenes/Gen5.unity
+    guid: bb10225db42adb340a5faffbffb1c4f4
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen4.unity
     guid: c11f2145868af224791be44925e0b64c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen5.unity
     guid: b3b32c0165ed21f4ba36149a24fc6c25
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen6.unity
     guid: 2de311efb9bdd1d4a90a49acfc19c652
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen7.unity
     guid: 1b2a52255f206144dbc3375f3effae32
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen8.unity
     guid: 0df3036ce9b1be1499e2d2af6e644dad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen9.unity
     guid: f4d7500b6016b4c459a41d59b1ce79aa
   - enabled: 1
