@@ -9,6 +9,7 @@ public class AtariScript : MonoBehaviour
 {
     //DebugText
     public TMP_Text DebugText;
+
 [Header("References Item Counter")]
     //ITEM COUNTER
     private bool isAtariCounted = false;
