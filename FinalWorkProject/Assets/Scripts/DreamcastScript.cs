@@ -14,6 +14,7 @@ public class DreamcastScript : MonoBehaviour
     private bool isDreamcastCounted = false;
     private bool isDreamcastControllerCounted = false;
     private bool isDreamcastCaseCounted = false;
+    private ItemCounterGen6 ItemCounterGen6;
     private ItemCounterDreamcast ItemCounterDreamcast;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class DreamcastScript : MonoBehaviour
         isDreamcastCounted = false;
 
         //Find ItemCounter
+        ItemCounterGen6 = FindObjectOfType<ItemCounterGen6>();
         ItemCounterDreamcast = FindObjectOfType<ItemCounterDreamcast>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class DreamcastScript : MonoBehaviour
         ConsoleNameBtn10.GetComponentInChildren<TextMeshProUGUI>().text = "Dreamcast";
         DreamcastConsoleInfo();
         if (!isDreamcastCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterDreamcast.IncrementCounterDreamcast();
             isDreamcastCounted = true;
         }
@@ -141,6 +144,7 @@ public class DreamcastScript : MonoBehaviour
         ControllerNameBtn10.GetComponentInChildren<TextMeshProUGUI>().text = "Dreamcast";
         DreamcastControllerInfo();
         if (!isDreamcastControllerCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterDreamcast.IncrementCounterDreamcast();
             isDreamcastControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class DreamcastScript : MonoBehaviour
         CaseNameBtn5.GetComponentInChildren<TextMeshProUGUI>().text = "Dreamcast";
         DreamcastCaseInfo();
         if (!isDreamcastCaseCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterDreamcast.IncrementCounterDreamcast();
             isDreamcastCaseCounted = true;
         }
@@ -164,22 +169,28 @@ public class DreamcastScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = DreamcastSprite;
         ItemDescriptionName.text = "Dreamcast";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sega\n"+
+        "Released: 1998 (Japan), 1999 (North America & Europe)\n"+
+        "About: The Sega Dreamcast was a groundbreaking console that marked Sega's final foray into the hardware market\n"+ 
+        "Known for its innovative features, such as online gaming capabilities and a built-in modem, the Dreamcast introduced\n"+
+        "several iconic games. Despite its short lifespan, the Dreamcast left a lasting legacy and is remembered fondly for its\n"+
+        "ahead-of-its-time technology and unique game library";
     }
     public void DreamcastControllerInfo(){
         ItemDescriptionImage.sprite = DreamcastControllerSprite;
         ItemDescriptionName.text = "Dreamcast";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sega\n"+
+        "About: The Dreamcast controller, designed for the Sega Dreamcast console, featured an innovative layout with a built-in\n"+
+        "memory card slot for the VMU (Visual Memory Unit), providing additional screen functionality and game-saving capabilities.\n"+
+        "Despite mixed reviews on its ergonomics, the Dreamcast controller is celebrated for its forward-thinking design and\n"+
+        "integration with the console's advanced features.";
     }
     public void DreamcastCaseInfo(){
         ItemDescriptionImage.sprite = DreamcastCaseSprite;
         ItemDescriptionName.text = "Dreamcast";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Dreamcast game case was a compact and sturdy plastic case designed to protect and store Dreamcast game discs.\n"+
+        "Featuring a distinctive blue spine and clear front cover, displaying the cover art, game information, and instructions.\n"+
+        "The design of the case reflected the sleek and modern aesthetic of the Dreamcast brand, making it an integral part of the overall presentation and appeal of the games\n"+
+        "There were a total of 624 released games on the Dreamcast";
     }
 }

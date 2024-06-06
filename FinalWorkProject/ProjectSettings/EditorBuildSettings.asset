@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gen5.unity
     guid: bb10225db42adb340a5faffbffb1c4f4
+  - enabled: 1
+    path: Assets/Scenes/Gen6.unity
+    guid: ef758fa6157a89e44ac05741271da379
   - enabled: 0
     path: Assets/Scenes/old/FinalWorkProject-Gen4.unity
     guid: c11f2145868af224791be44925e0b64c

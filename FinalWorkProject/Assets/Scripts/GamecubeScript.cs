@@ -14,6 +14,7 @@ public class GamecubeScript : MonoBehaviour
     private bool isGamecubeCounted = false;
     private bool isGamecubeControllerCounted = false;
     private bool isGamecubeCaseCounted = false;
+    private ItemCounterGen6 ItemCounterGen6;
     private ItemCounterGamecube ItemCounterGamecube;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class GamecubeScript : MonoBehaviour
         isGamecubeCounted = false;
 
         //Find ItemCounter
+        ItemCounterGen6 = FindObjectOfType<ItemCounterGen6>();
         ItemCounterGamecube = FindObjectOfType<ItemCounterGamecube>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class GamecubeScript : MonoBehaviour
         ConsoleNameBtn9.GetComponentInChildren<TextMeshProUGUI>().text = "Gamecube";
         GamecubeConsoleInfo();
         if (!isGamecubeCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterGamecube.IncrementCounterGamecube();
             isGamecubeCounted = true;
         }
@@ -141,6 +144,7 @@ public class GamecubeScript : MonoBehaviour
         ControllerNameBtn9.GetComponentInChildren<TextMeshProUGUI>().text = "Gamecube";
         GamecubeControllerInfo();
         if (!isGamecubeControllerCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterGamecube.IncrementCounterGamecube();
             isGamecubeControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class GamecubeScript : MonoBehaviour
         CaseNameBtn4.GetComponentInChildren<TextMeshProUGUI>().text = "Gamecube";
         GamecubeCaseInfo();
         if (!isGamecubeCaseCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterGamecube.IncrementCounterGamecube();
             isGamecubeCaseCounted = true;
         }
@@ -163,23 +168,23 @@ public class GamecubeScript : MonoBehaviour
     public void GamecubeConsoleInfo(){
         //Update InfoCanvas
         ItemDescriptionImage.sprite = GamecubeSprite;
-        ItemDescriptionName.text = "Gamecube";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionName.text = "GameCube";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: 2001 & 2002\n"+
+        "About: The GameCube was notable for its cube-shaped design, which made it stand out compared to its competitors.\n"+
+        "Nintendo decided to use miniDVD discs to store their games on, instead of using cd-roms like their competitors.";
     }
     public void GamecubeControllerInfo(){
         ItemDescriptionImage.sprite = GamecubeControllerSprite;
         ItemDescriptionName.text = "Gamecube";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The controller, known as the GameCube controller, introduced a unique button layout and was praised for its comfortable grip and ergonomic design\n"+
+        "This controller was so popular that Nintendo decided to rerelease it for its more recent consoles as an alternative controller, with minimal changes.";
     }
     public void GamecubeCaseInfo(){
         ItemDescriptionImage.sprite = GamecubeCaseSprite;
         ItemDescriptionName.text = "Gamecube";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "The cases were typically dark gray or black, with a sleek, minimalist design that emphasized the GameCube branding\n"+
+        "GameCube cases were slightly more compact than standard DVD cases, designed specifically to fit the smaller GameCube discs, which were 3 inches in diameter compared to the standard 4.7-inch DVDs.\n"+
+        "The GameCube had a library of 621 games";
     }
 }

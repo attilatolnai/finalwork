@@ -14,6 +14,7 @@ public class XboxScript : MonoBehaviour
     private bool isXboxCounted = false;
     private bool isXboxControllerCounted = false;
     private bool isXboxCaseCounted = false;
+    private ItemCounterGen6 ItemCounterGen6;
     private ItemCounterXbox ItemCounterXbox;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class XboxScript : MonoBehaviour
         isXboxCounted = false;
 
         //Find ItemCounter
+        ItemCounterGen6 = FindObjectOfType<ItemCounterGen6>();
         ItemCounterXbox = FindObjectOfType<ItemCounterXbox>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class XboxScript : MonoBehaviour
         ConsoleNameBtn11.GetComponentInChildren<TextMeshProUGUI>().text = "Xbox";
         XboxConsoleInfo();
         if (!isXboxCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterXbox.IncrementCounterXbox();
             isXboxCounted = true;
         }
@@ -141,6 +144,7 @@ public class XboxScript : MonoBehaviour
         ControllerNameBtn11.GetComponentInChildren<TextMeshProUGUI>().text = "Xbox";
         XboxControllerInfo();
         if (!isXboxControllerCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterXbox.IncrementCounterXbox();
             isXboxControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class XboxScript : MonoBehaviour
         CaseNameBtn6.GetComponentInChildren<TextMeshProUGUI>().text = "Xbox";
         XboxCaseInfo();
         if (!isXboxCaseCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterXbox.IncrementCounterXbox();
             isXboxCaseCounted = true;
         }
@@ -164,22 +169,21 @@ public class XboxScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = XboxSprite;
         ItemDescriptionName.text = "Xbox";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Microsoft\n"+
+        "Released: 2001 & 2002\n"+
+        "About: The Xbox was Microsoft's entry into the console market\n"+
+        "The Xbox was the first console with a built-in hard drive, which was used for saving games and storing downloadable content.\n"+
+        "It supported online gaming through its Xbox Live service, which was a major innovation at the time and set the standard for future online gaming services.";
     }
     public void XboxControllerInfo(){
         ItemDescriptionImage.sprite = XboxControllerSprite;
         ItemDescriptionName.text = "Xbox";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The controller for the Xbox was nicknamed the 'Duke' because of its large size.\n"+
+        "It has two analog sticks, a directional pad, six action buttons, and two analog triggers. It was later replaced by the smaller 'Controller S' due to player feedback";
     }
     public void XboxCaseInfo(){
         ItemDescriptionImage.sprite = XboxCaseSprite;
         ItemDescriptionName.text = "Xbox";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: Xbox game cases use the standard DVD size, approximately 7.5 x 5.5 inches, and were typically green colored, making them easily distinguishable from other gaming platforms.";
     }
 }

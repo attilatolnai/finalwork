@@ -14,6 +14,7 @@ public class PS2Script : MonoBehaviour
     private bool isPS2Counted = false;
     private bool isPS2ControllerCounted = false;
     private bool isPS2CaseCounted = false;
+    private ItemCounterGen6 ItemCounterGen6;
     private ItemCounterPS2 ItemCounterPS2;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class PS2Script : MonoBehaviour
         isPS2Counted = false;
 
         //Find ItemCounter
+        ItemCounterGen6 = FindObjectOfType<ItemCounterGen6>();
         ItemCounterPS2 = FindObjectOfType<ItemCounterPS2>();
         
         // Load sprites from Resources
@@ -129,6 +131,7 @@ public class PS2Script : MonoBehaviour
         ConsoleNameBtn8.GetComponentInChildren<TextMeshProUGUI>().text = "PS2";
         PS2ConsoleInfo();
         if (!isPS2Counted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterPS2.IncrementCounterPS2();
             isPS2Counted = true;
         }
@@ -141,6 +144,7 @@ public class PS2Script : MonoBehaviour
         ControllerNameBtn8.GetComponentInChildren<TextMeshProUGUI>().text = "PS2";
         PS2ControllerInfo();
         if (!isPS2ControllerCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterPS2.IncrementCounterPS2();
             isPS2ControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class PS2Script : MonoBehaviour
         CaseNameBtn3.GetComponentInChildren<TextMeshProUGUI>().text = "PS2";
         PS2CaseInfo();
         if (!isPS2CaseCounted){
+            ItemCounterGen6.IncrementCounterGen6();
             ItemCounterPS2.IncrementCounterPS2();
             isPS2CaseCounted = true;
         }
@@ -164,22 +169,20 @@ public class PS2Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = PS2Sprite;
         ItemDescriptionName.text = "PS2";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sony Computer Entertainment \n"+
+        "Released: 2000 \n"+
+        "About: Successor to the PlayStation, The PS2 had a slick black design and supported CD-ROM, DVD-ROM, and PlayStation game discs, which allowed users to play PlayStation games.\n"+
+        "A major selling point for the PlayStation 2 was the support of DVD playback, meaning that the PS2 could be used as a DVD player to watch movies.";
     }
     public void PS2ControllerInfo(){
         ItemDescriptionImage.sprite = PS2ControllerSprite;
         ItemDescriptionName.text = "PS2";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The PS2 controller, called DualShock2 was an improvement on the design of the original DualShock with and released with 2 analog sticks";
     }
     public void PS2CaseInfo(){
         ItemDescriptionImage.sprite = PS2CaseSprite;
         ItemDescriptionName.text = "PS2";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: A PlayStation 2 game case is a plastic clamshell box, typically black or dark blue.\n"+
+        "The PS2 had a library of 3,429 games, and the last game released for the console was 'Pro Evolution Soccer 2014', which released a week before the launch of the PlayStation 4!";
     }
 }
