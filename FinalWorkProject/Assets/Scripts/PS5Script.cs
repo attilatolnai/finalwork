@@ -14,6 +14,7 @@ public class PS5Script : MonoBehaviour
     private bool isPS5Counted = false;
     private bool isPS5ControllerCounted = false;
     private bool isPS5CaseCounted = false;
+    private ItemCounterGen9 ItemCounterGen9;
     private ItemCounterPS5 ItemCounterPS5;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class PS5Script : MonoBehaviour
         isPS5Counted = false;
 
         //Find ItemCounter
+        ItemCounterGen9 = FindObjectOfType<ItemCounterGen9>();
         ItemCounterPS5 = FindObjectOfType<ItemCounterPS5>();
         
         // Load sprites from Resources
@@ -72,9 +74,9 @@ public class PS5Script : MonoBehaviour
         PS5CaseSprite = Resources.Load<Sprite>("Images/PS5_case");
 
         // Set colors to white
-        InteractWithPS5Console.color = Color.white;
-        InteractWithPS5Controller.color = Color.white;
-        InteractWithPS5Case.color = Color.white;
+        InteractWithPS5Console.color = Color.black;
+        InteractWithPS5Controller.color = Color.black;
+        InteractWithPS5Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         PS5Grabbable = PS5.GetComponent<OVRGrabbable>();
@@ -129,6 +131,7 @@ public class PS5Script : MonoBehaviour
         ConsoleNameBtn18.GetComponentInChildren<TextMeshProUGUI>().text = "PS5";
         PS5ConsoleInfo();
         if (!isPS5Counted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterPS5.IncrementCounterPS5();
             isPS5Counted = true;
         }
@@ -141,6 +144,7 @@ public class PS5Script : MonoBehaviour
         ControllerNameBtn18.GetComponentInChildren<TextMeshProUGUI>().text = "PS5";
         PS5ControllerInfo();
         if (!isPS5ControllerCounted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterPS5.IncrementCounterPS5();
             isPS5ControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class PS5Script : MonoBehaviour
         CaseNameBtn13.GetComponentInChildren<TextMeshProUGUI>().text = "PS5";
         PS5CaseInfo();
         if (!isPS5CaseCounted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterPS5.IncrementCounterPS5();
             isPS5CaseCounted = true;
         }
@@ -164,22 +169,23 @@ public class PS5Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = PS5Sprite;
         ItemDescriptionName.text = "PS5";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sony Computer Entertainment\n"+
+        "Released: 2020\n"+
+        "About: Sony's current console on the market is the PlayStation 5 which features a bold and futuristic design with a white and black color scheme. It has a large, curved body with distinctive white side panels that house the cooling system.\n"+
+        "In 42 months, the PlayStation 5 managed to sell 58.01 million copies.";
     }
     public void PS5ControllerInfo(){
         ItemDescriptionImage.sprite = PS5ControllerSprite;
         ItemDescriptionName.text = "PS5";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The PS5 controller is called the DualSense and has some distincive features.\n"+
+        "One of these features are the adaptive triggers. The L2 and R2 buttons offer varying levels of resistance to simulating the tension of different actions, like shooting a gun or accelerating a vehicle.\n"+
+        "The other main feature is the advanced haptic feedback, allowing players to feel a wider range of vibrations and textures.";
     }
     public void PS5CaseInfo(){
         ItemDescriptionImage.sprite = PS5CaseSprite;
         ItemDescriptionName.text = "PS5";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: PS5 cases are similar in size to standard Blu-ray cases, measuring about 6.8 x 5.3 inches. They are blue colored, matching the theme of the PlayStation 4 game cases but slightly clearer and sleeker in appearance.\n"+
+        "The front of the case displays the PS5 logo in a white bar instead of the PS4's blue bar.\n"+
+        "As of the making of this project, 2,453 PS5 games were released.";
     }
 }

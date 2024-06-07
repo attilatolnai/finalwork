@@ -184,6 +184,7 @@ public class XboxScript : MonoBehaviour
     public void XboxCaseInfo(){
         ItemDescriptionImage.sprite = XboxCaseSprite;
         ItemDescriptionName.text = "Xbox";
-        ItemDescriptionText.text = "About: Xbox game cases use the standard DVD size, approximately 7.5 x 5.5 inches, and were typically green colored, making them easily distinguishable from other gaming platforms.";
+        ItemDescriptionText.text = "About: Xbox game cases use the standard DVD size, approximately 7.5 x 5.5 inches, and were typically green colored, making them easily distinguishable from other gaming platforms.\n"+
+        "There were 1,017 games released on the Xbox during its lifespan.";
     }
 }

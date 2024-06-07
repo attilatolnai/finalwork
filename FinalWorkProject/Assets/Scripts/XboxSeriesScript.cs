@@ -14,6 +14,7 @@ public class XboxSeriesScript : MonoBehaviour
     private bool isXboxSeriesCounted = false;
     private bool isXboxSeriesControllerCounted = false;
     private bool isXboxSeriesCaseCounted = false;
+    private ItemCounterGen9 ItemCounterGen9;
     private ItemCounterXboxSeries ItemCounterXboxSeries;
 [Header("References Info Canvas")]
     //INFOCANVAS
@@ -64,6 +65,7 @@ public class XboxSeriesScript : MonoBehaviour
         isXboxSeriesCounted = false;
 
         //Find ItemCounter
+        ItemCounterGen9 = FindObjectOfType<ItemCounterGen9>();
         ItemCounterXboxSeries = FindObjectOfType<ItemCounterXboxSeries>();
         
         // Load sprites from Resources
@@ -72,9 +74,9 @@ public class XboxSeriesScript : MonoBehaviour
         XboxSeriesCaseSprite = Resources.Load<Sprite>("Images/XboxSeries_case");
 
         // Set colors to white
-        InteractWithXboxSeriesConsole.color = Color.white;
-        InteractWithXboxSeriesController.color = Color.white;
-        InteractWithXboxSeriesCase.color = Color.white;
+        InteractWithXboxSeriesConsole.color = Color.black;
+        InteractWithXboxSeriesController.color = Color.black;
+        InteractWithXboxSeriesCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         XboxSeriesGrabbable = XboxSeries.GetComponent<OVRGrabbable>();
@@ -129,6 +131,7 @@ public class XboxSeriesScript : MonoBehaviour
         ConsoleNameBtn19.GetComponentInChildren<TextMeshProUGUI>().text = "XboxSeries";
         XboxSeriesConsoleInfo();
         if (!isXboxSeriesCounted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterXboxSeries.IncrementCounterXboxSeries();
             isXboxSeriesCounted = true;
         }
@@ -141,6 +144,7 @@ public class XboxSeriesScript : MonoBehaviour
         ControllerNameBtn19.GetComponentInChildren<TextMeshProUGUI>().text = "XboxSeries";
         XboxSeriesControllerInfo();
         if (!isXboxSeriesControllerCounted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterXboxSeries.IncrementCounterXboxSeries();
             isXboxSeriesControllerCounted = true;
         }
@@ -154,6 +158,7 @@ public class XboxSeriesScript : MonoBehaviour
         CaseNameBtn14.GetComponentInChildren<TextMeshProUGUI>().text = "XboxSeries";
         XboxSeriesCaseInfo();
         if (!isXboxSeriesCaseCounted){
+            ItemCounterGen9.IncrementCounterGen9();
             ItemCounterXboxSeries.IncrementCounterXboxSeries();
             isXboxSeriesCaseCounted = true;
         }
@@ -164,22 +169,23 @@ public class XboxSeriesScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = XboxSeriesSprite;
         ItemDescriptionName.text = "XboxSeries";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Microsoft\n"+
+        "Released: 2020\n"+
+        "About: The Xbox Series X features a tower-like design with a black exterior and a large cooling vent at the top.\n"+
+        "Unfortunately for Microsoft, the Xbox Series hasn't been selling that well and their future as a console manufacturer is being questioned as they started to heavily push their own subscription service, Xbox Game Pass, to make up for the lack of sales of their console.";
     }
     public void XboxSeriesControllerInfo(){
         ItemDescriptionImage.sprite = XboxSeriesControllerSprite;
         ItemDescriptionName.text = "XboxSeries";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Xbox Series controller has a refined design that closely resembles its predecessor, the Xbox One controller\n"+
+        "It features slight ergonomic improvements, textured grips and slightly more compact shape.\n"+
+        "The Xbox Series controller is compatible with Xbox Series, the Xbox One, Windows PCs, Android devices and iOS devices.";
     }
     public void XboxSeriesCaseInfo(){
         ItemDescriptionImage.sprite = XboxSeriesCaseSprite;
         ItemDescriptionName.text = "XboxSeries";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: Xbox Series cases have a translucent dark green compared to the Xbox One's solid green color. This change was made to give them a sleeker, more modern appearance.\n"+
+        "The cases are also often designed with eco-friendly features such as cut-out patterns to reduce plastic use and promote sustainability.\n"+
+        "As of the making of this project, 3,051 games were released on the Xbox Series X.";
     }
 }
