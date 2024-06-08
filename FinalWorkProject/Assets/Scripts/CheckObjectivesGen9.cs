@@ -122,6 +122,16 @@ public class CheckObjectivesGen9 : MonoBehaviour
         ConsoleImageSlot5PS1.SetActive(true);
         ConsoleImageSlot6N64.SetActive(true);
         ConsoleImageSlot7Saturn.SetActive(true);
+        ConsoleImageSlot8PS2.SetActive(true);
+        ConsoleImageSlot9Gamecube.SetActive(true);
+        ConsoleImageSlot10Dreamcast.SetActive(true);
+        ConsoleImageSlot11Xbox.SetActive(true);
+        ConsoleImageSlot12PS3.SetActive(true);
+        ConsoleImageSlot13Xbox360.SetActive(true);
+        ConsoleImageSlot14Wii.SetActive(true);
+        ConsoleImageSlot15PS4.SetActive(true);
+        ConsoleImageSlot16XboxOne.SetActive(true);
+        ConsoleImageSlot17Switch.SetActive(true);
 
         ControllerImageSlot1Atari.SetActive(true);
         ControllerImageSlot2NES.SetActive(true);
