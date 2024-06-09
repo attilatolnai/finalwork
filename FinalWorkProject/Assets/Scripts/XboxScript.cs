@@ -73,10 +73,10 @@ public class XboxScript : MonoBehaviour
         XboxControllerSprite = Resources.Load<Sprite>("Images/Xbox_controller");
         XboxCaseSprite = Resources.Load<Sprite>("Images/Xbox_case");
 
-        // Set colors to white
-        InteractWithXboxConsole.color = Color.white;
-        InteractWithXboxController.color = Color.white;
-        InteractWithXboxCase.color = Color.white;
+        // Set colors to black
+        InteractWithXboxConsole.color = Color.black;
+        InteractWithXboxController.color = Color.black;
+        InteractWithXboxCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         XboxGrabbable = Xbox.GetComponent<OVRGrabbable>();

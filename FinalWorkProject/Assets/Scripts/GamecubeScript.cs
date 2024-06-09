@@ -73,10 +73,10 @@ public class GamecubeScript : MonoBehaviour
         GamecubeControllerSprite = Resources.Load<Sprite>("Images/Gamecube_controller");
         GamecubeCaseSprite = Resources.Load<Sprite>("Images/Gamecube_case");
 
-        // Set colors to white
-        InteractWithGamecubeConsole.color = Color.white;
-        InteractWithGamecubeController.color = Color.white;
-        InteractWithGamecubeCase.color = Color.white;
+        // Set colors to black
+        InteractWithGamecubeConsole.color = Color.black;
+        InteractWithGamecubeController.color = Color.black;
+        InteractWithGamecubeCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         GamecubeGrabbable = Gamecube.GetComponent<OVRGrabbable>();

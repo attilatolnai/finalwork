@@ -73,10 +73,10 @@ public class PS2Script : MonoBehaviour
         PS2ControllerSprite = Resources.Load<Sprite>("Images/PS2_controller");
         PS2CaseSprite = Resources.Load<Sprite>("Images/PS2_case");
 
-        // Set colors to white
-        InteractWithPS2Console.color = Color.white;
-        InteractWithPS2Controller.color = Color.white;
-        InteractWithPS2Case.color = Color.white;
+        // Set colors to black
+        InteractWithPS2Console.color = Color.black;
+        InteractWithPS2Controller.color = Color.black;
+        InteractWithPS2Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         PS2Grabbable = PS2.GetComponent<OVRGrabbable>();

@@ -73,10 +73,10 @@ public class DreamcastScript : MonoBehaviour
         DreamcastControllerSprite = Resources.Load<Sprite>("Images/Dreamcast_controller");
         DreamcastCaseSprite = Resources.Load<Sprite>("Images/Dreamcast_case");
 
-        // Set colors to white
-        InteractWithDreamcastConsole.color = Color.white;
-        InteractWithDreamcastController.color = Color.white;
-        InteractWithDreamcastCase.color = Color.white;
+        // Set colors to black
+        InteractWithDreamcastConsole.color = Color.black;
+        InteractWithDreamcastController.color = Color.black;
+        InteractWithDreamcastCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         DreamcastGrabbable = Dreamcast.GetComponent<OVRGrabbable>();
