@@ -74,10 +74,10 @@ public class AtariScript : MonoBehaviour
         AtariControllerSprite = Resources.Load<Sprite>("Images/Atari_controller");
         AtariCartridgeSprite = Resources.Load<Sprite>("Images/Atari_cartridge");
 
-        // Set colors to white
-        InteractWithAtariConsole.color = Color.white;
-        InteractWithAtariController.color = Color.white;
-        InteractWithAtariCartridge.color = Color.white;
+        // Set colors to black
+        InteractWithAtariConsole.color = Color.black;
+        InteractWithAtariController.color = Color.black;
+        InteractWithAtariCartridge.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         AtariGrabbable = Atari.GetComponent<OVRGrabbable>();

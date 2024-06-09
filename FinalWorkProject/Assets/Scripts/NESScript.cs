@@ -68,10 +68,10 @@ public class NESScript : MonoBehaviour
         NESControllerSprite = Resources.Load<Sprite>("Images/NES_controller");
         NESCartridgeSprite = Resources.Load<Sprite>("Images/NES_cartridge");
 
-        // Set colors to white
-        InteractWithNESConsole.color = Color.white;
-        InteractWithNESController.color = Color.white;
-        InteractWithNESCartridge.color = Color.white;
+        // Set colors to black
+        InteractWithNESConsole.color = Color.black;
+        InteractWithNESController.color = Color.black;
+        InteractWithNESCartridge.color = Color.black;
 
         // Get 'grabbable' from the gameObjects
         NESGrabbable = NES.GetComponent<OVRGrabbable>();
