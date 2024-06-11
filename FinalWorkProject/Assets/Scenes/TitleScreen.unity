@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TIMELINE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
+  m_sharedMaterial: {fileID: -3995341474344950768, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1326,8 +1326,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GO TO 1986
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
+  m_sharedMaterial: {fileID: -3995341474344950768, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2035,8 +2035,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MUSEUM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
+  m_sharedMaterial: {fileID: -3995341474344950768, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

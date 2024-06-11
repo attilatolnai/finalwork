@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuControllerRooms : MonoBehaviour
-{
+{   
+    public void GoToGen3()
+    {
+        SceneManager.LoadScene("Gen3");
+    }
     public void GoToGen4()
     {
         SceneManager.LoadScene("Gen4");
