@@ -170,7 +170,7 @@ public class GamecubeScript : MonoBehaviour
         ItemDescriptionImage.sprite = GamecubeSprite;
         ItemDescriptionName.text = "GameCube";
         ItemDescriptionText.text = "Made by: Nintendo\n"+
-        "Released: 2001 & 2002\n"+
+        "Released: 2001\n"+
         "About: The GameCube was notable for its cube-shaped design, which made it stand out compared to its competitors.\n"+
         "Nintendo decided to use miniDVD discs to store their games on, instead of using cd-roms like their competitors.";
     }

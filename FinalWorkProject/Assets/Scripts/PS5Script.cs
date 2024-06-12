@@ -73,7 +73,7 @@ public class PS5Script : MonoBehaviour
         PS5ControllerSprite = Resources.Load<Sprite>("Images/PS5_controller");
         PS5CaseSprite = Resources.Load<Sprite>("Images/PS5_case");
 
-        // Set colors to white
+        // Set colors to black
         InteractWithPS5Console.color = Color.black;
         InteractWithPS5Controller.color = Color.black;
         InteractWithPS5Case.color = Color.black;

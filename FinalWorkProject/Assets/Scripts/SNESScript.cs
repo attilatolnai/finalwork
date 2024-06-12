@@ -73,10 +73,10 @@ public class SNESScript : MonoBehaviour
         SNESControllerSprite = Resources.Load<Sprite>("Images/SNES_controller");
         SNESCartridgeSprite = Resources.Load<Sprite>("Images/SNES_cartridge");
 
-        // Set colors to white
-        InteractWithSNESConsole.color = Color.white;
-        InteractWithSNESController.color = Color.white;
-        InteractWithSNESCartridge.color = Color.white;
+        // Set colors to black
+        InteractWithSNESConsole.color = Color.black;
+        InteractWithSNESController.color = Color.black;
+        InteractWithSNESCartridge.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         SNESGrabbable = SNES.GetComponent<OVRGrabbable>();
@@ -169,22 +169,21 @@ public class SNESScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = SNESSprite;
         ItemDescriptionName.text = "SNES";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: 1990\n"+
+        "About: The 'Super Nintendo Entertainment System' had a different name in Japan and Europe, where it was released under the 'Super Famicom' name.\n"+
+        "The SNES had 2 different color schemes depending on the region: a gray and purple color scheme in the US and a more grey console, but more colorful controller in Europe.";
     }
     public void SNESControllerInfo(){
         ItemDescriptionImage.sprite = SNESControllerSprite;
         ItemDescriptionName.text = "SNES";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The SNES controller is known for its rounded, ergonomic design, which improved comfort during extended play sessions. It features a cross-shaped D-pad on the left side for precise directional control. On the right side, it has four action buttons labeled A, B, X, and Y, arranged in a diamond pattern, providing versatile input options for games.\n"+
+        "The controller also includes 'Start' and 'Select' buttons in the center, used for pausing games and navigating menus. Additionally, it introduced shoulder buttons, L and R, on the top edge of the controller.";
     }
     public void SNESCartridgeInfo(){
         ItemDescriptionImage.sprite = SNESCartridgeSprite;
         ItemDescriptionName.text = "SNES";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The SNES cartridge is a compact, rectangular plastic module used to store and play video games on the Super Nintendo Entertainment System. Each cartridge contains a printed circuit board with ROM chips that hold the game data, and sometimes additional chips for enhanced graphics or processing capabilities. The front of the cartridge features a label with the game's title and artwork.\n"+
+        "Cartridges are inserted into a top-loading slot on the SNES console, connecting via a 62-pin edge connector to the system.";
     }
 }

@@ -71,10 +71,10 @@ public class PS4Script : MonoBehaviour
         PS4ControllerSprite = Resources.Load<Sprite>("Images/PS4_controller");
         PS4CaseSprite = Resources.Load<Sprite>("Images/PS4_case");
 
-        // Set colors to white
-        InteractWithPS4Console.color = Color.white;
-        InteractWithPS4Controller.color = Color.white;
-        InteractWithPS4Case.color = Color.white;
+        // Set colors to black
+        InteractWithPS4Console.color = Color.black;
+        InteractWithPS4Controller.color = Color.black;
+        InteractWithPS4Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         PS4Grabbable = PS4.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class PS4Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = PS4Sprite;
         ItemDescriptionName.text = "PS4";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sony Computer Entertainment\n"+
+        "Released: 2013\n"+
+        "About: The PlayStation 4 was developed and manufactured by Sony Interactive Entertainment and released everywhere late 2013. The PlayStation 4 is praised for its strong game library, which include many critically acclaimed exclusive titles and a wide array of third-party games. ";
     }
     public void PS4ControllerInfo(){
         ItemDescriptionImage.sprite = PS4ControllerSprite;
         ItemDescriptionName.text = "PS4";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The PS4 game case is a sleek, modern blue plastic case, slightly slimmer than its predecessor, designed to house and showcase PlayStation 4 game discs. Inside, the case includes a sturdy plastic tray with a central spindle to securely hold the disc, along with clips or a sleeve for any included inserts or manuals.";
     }
     public void PS4CaseInfo(){
         ItemDescriptionImage.sprite = PS4CaseSprite;
         ItemDescriptionName.text = "PS4";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The DualShock 4 introduces a touchpad at the center, offering new possibilities for intuitive input and gameplay mechanics. Additionally, it includes a share button, enabling seamless social interaction and content sharing directly from the controller.";
     }
 }

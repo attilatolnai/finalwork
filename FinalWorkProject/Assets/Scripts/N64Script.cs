@@ -74,10 +74,10 @@ public class N64Script : MonoBehaviour
         N64ControllerSprite = Resources.Load<Sprite>("Images/N64_controller");
         N64CartridgeSprite = Resources.Load<Sprite>("Images/N64_Cartridge");
 
-        // Set colors to white
-        InteractWithN64Console.color = Color.white;
-        InteractWithN64Controller.color = Color.white;
-        InteractWithN64Cartridge.color = Color.white;
+        // Set colors to black
+        InteractWithN64Console.color = Color.black;
+        InteractWithN64Controller.color = Color.black;
+        InteractWithN64Cartridge.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         N64Grabbable = N64.GetComponent<OVRGrabbable>();
@@ -170,22 +170,19 @@ public class N64Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = N64Sprite;
         ItemDescriptionName.text = "N64";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: 1996\n"+
+        "About: The Nintendo 64 was developed and manufactured by Nintendo. The N64 still used ROM cartridges for its games, which provided faster load times for its games, but compared to their competitors who started using CD ROM’s instead, N64 games had a more limited storage capacity.";
     }
     public void N64ControllerInfo(){
         ItemDescriptionImage.sprite = N64ControllerSprite;
         ItemDescriptionName.text = "N64";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The N64 controller is unique for its innovative and unconventional three-pronged design. It features a central joystick for precise analog control, flanked by a traditional D-pad on the left and six action buttons on the right: A, B, and four C buttons for camera and movement control. The controller also includes 'Start' and 'Select' buttons in the middle, and a Z-trigger button on the back of the central prong for additional gameplay functions. The layout allows for different gripping styles, accommodating various types of games and control schemes.";
     }
     public void N64CartridgeInfo(){
         ItemDescriptionImage.sprite = N64CartridgeSprite;
         ItemDescriptionName.text = "N64";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The N64 cartridge is a robust, rectangular plastic module used to store and play games on the Nintendo 64 console. Each cartridge contains a printed circuit board with ROM chips that stores the game data.\n"+
+        "The front of the cartridge features a label displaying the game's title and artwork, providing clear identification. Cartridges are inserted into a top-loading slot on the N64 console, connecting via a 50-pin edge connector to interface with the system.";
     }
 }

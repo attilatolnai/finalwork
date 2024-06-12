@@ -71,10 +71,10 @@ public class SwitchScript : MonoBehaviour
         SwitchControllerSprite = Resources.Load<Sprite>("Images/Switch_controller");
         SwitchCaseSprite = Resources.Load<Sprite>("Images/Switch_Case");
 
-        // Set colors to white
-        InteractWithSwitchConsole.color = Color.white;
-        InteractWithSwitchController.color = Color.white;
-        InteractWithSwitchCase.color = Color.white;
+        // Set colors to black
+        InteractWithSwitchConsole.color = Color.black;
+        InteractWithSwitchController.color = Color.black;
+        InteractWithSwitchCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         SwitchGrabbable = Switch.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class SwitchScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = SwitchSprite;
         ItemDescriptionName.text = "Switch";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: 2017\n"+
+        "About: The Nintendo Switch was developed and manufactured by Nintendo and released globally in 2017. It appealed to a broad audience, including both traditional gamers and casual players, and benefited heavily from strong sales during the COVID-19 pandemic. The Switch is still in production and as of current estimations it has sold over 141.32 million units worldwide, with a chance of overtaking Sony’s PlayStation 2 as the most sold console of all time.";
     }
     public void SwitchControllerInfo(){
         ItemDescriptionImage.sprite = SwitchControllerSprite;
         ItemDescriptionName.text = "Switch";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: ...";
     }
     public void SwitchCaseInfo(){
         ItemDescriptionImage.sprite = SwitchCaseSprite;
         ItemDescriptionName.text = "Switch";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Switch case often comes in a vibrant red color, echoing the signature hue of the Switch's Joy-Con controllers and adding a touch of Nintendo's playful aesthetic. Inside, the case features molded compartments to securely hold multiple game cartridges, ensuring they remain organized and protected during travel.";
     }
 }

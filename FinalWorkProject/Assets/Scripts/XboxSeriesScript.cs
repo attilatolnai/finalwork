@@ -73,7 +73,7 @@ public class XboxSeriesScript : MonoBehaviour
         XboxSeriesControllerSprite = Resources.Load<Sprite>("Images/XboxSeries_controller");
         XboxSeriesCaseSprite = Resources.Load<Sprite>("Images/XboxSeries_case");
 
-        // Set colors to white
+        // Set colors to black
         InteractWithXboxSeriesConsole.color = Color.black;
         InteractWithXboxSeriesController.color = Color.black;
         InteractWithXboxSeriesCase.color = Color.black;

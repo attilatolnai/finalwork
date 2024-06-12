@@ -74,10 +74,10 @@ public class PS1Script : MonoBehaviour
         PS1ControllerSprite = Resources.Load<Sprite>("Images/PS1_controller");
         PS1CaseSprite = Resources.Load<Sprite>("Images/PS1_case");
 
-        // Set colors to white
-        InteractWithPS1Console.color = Color.white;
-        InteractWithPS1Controller.color = Color.white;
-        InteractWithPS1Case.color = Color.white;
+        // Set colors to black
+        InteractWithPS1Console.color = Color.black;
+        InteractWithPS1Controller.color = Color.black;
+        InteractWithPS1Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         PS1Grabbable = PS1.GetComponent<OVRGrabbable>();
@@ -170,22 +170,20 @@ public class PS1Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = PS1Sprite;
         ItemDescriptionName.text = "PS1";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sony Computer Entertainment\n"+
+        "Released: 1994\n"+
+        "About: The Sony PlayStation has a distinctive, slick gray shape and a CD tray to play games. The games were stored on CD-ROM disks which allowed developers to create larger in game world compared to their competitors.\n"+
+        "Sony’s Playstation was a huge success, selling over 102 million units worldwide during its lifespan, making it one of the best-selling consoles of all time.";
     }
     public void PS1ControllerInfo(){
         ItemDescriptionImage.sprite = PS1ControllerSprite;
         ItemDescriptionName.text = "PS1";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The 'DualShock' includes a D-pad on the left side and four action buttons on the right, labeled with iconic symbols: a triangle, circle, cross, and square.\n"+
+        "It also has 'Start' and 'Select' buttons in the center, along with two pairs of shoulder buttons, L1, L2, R1, and R2, enhancing control options.";
     }
     public void PS1CaseInfo(){
         ItemDescriptionImage.sprite = PS1CaseSprite;
         ItemDescriptionName.text = "PS1";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The PS1 case is a clear or opaque plastic jewel case designed to protect and display PlayStation 1 game discs. The front cover typically features vibrant artwork, the game's title, and sometimes additional graphics or logos. The case's design allows for easy stacking and storage, contributing to its durability and protection of the game disc. ";
     }
 }

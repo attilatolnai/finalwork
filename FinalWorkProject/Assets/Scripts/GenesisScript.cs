@@ -73,10 +73,10 @@ public class GenesisScript : MonoBehaviour
         GenesisControllerSprite = Resources.Load<Sprite>("Images/Genesis_controller");
         GenesisCartridgeSprite = Resources.Load<Sprite>("Images/Genesis_cartridge");
 
-        // Set colors to white
-        InteractWithGenesisConsole.color = Color.white;
-        InteractWithGenesisController.color = Color.white;
-        InteractWithGenesisCartridge.color = Color.white;
+        // Set colors to black
+        InteractWithGenesisConsole.color = Color.black;
+        InteractWithGenesisController.color = Color.black;
+        InteractWithGenesisCartridge.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         GenesisGrabbable = Genesis.GetComponent<OVRGrabbable>();
@@ -169,22 +169,20 @@ public class GenesisScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = GenesisSprite;
         ItemDescriptionName.text = "Genesis";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sega\n"+
+        "Released: 1989\n"+
+        "About: The Sega Genesis was developed and manufactured by Sega and had 2 different names: Sega Genesis in the US and Sega Mega Drive in Japan and Europe. It featured a sleek black design with a front-loading cartridge slot to insert game cartridges.\n"+
+        "The Sega Genesis was successful in part due to its aggressive marketing and established a strong foothold in the market. The Genesis's success helped Sega establish itself as a major player in the video game industry during the early 1990s.";
     }
     public void GenesisControllerInfo(){
         ItemDescriptionImage.sprite = GenesisControllerSprite;
         ItemDescriptionName.text = "Genesis";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Sega Genesis controller is a widely recognized for it's boomerang-shaped design. It features a prominent directional pad (D-pad) on the left side, allowing for precise directional control in games. On the right side, there are three large, labeled buttons: A, B, and C, which are used for various in-game actions. The controller also includes a 'Start' button in the center, primarily used to pause the game or navigate menus.";
     }
     public void GenesisCartridgeInfo(){
         ItemDescriptionImage.sprite = GenesisCartridgeSprite;
         ItemDescriptionName.text = "Genesis";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Genesis cartridge, used for the Sega Genesis console, is a rectangular plastic module designed to store and play video games. Cartridges are inserted into a top-loading slot on the console, connecting via a 32-pin edge connector to interface with the system.\n"+
+        "This design, combined with the console's powerful hardware, allowed for a rich and diverse library of games that contributed to the Genesis's popularity in the early 1990s.";
     }
 }

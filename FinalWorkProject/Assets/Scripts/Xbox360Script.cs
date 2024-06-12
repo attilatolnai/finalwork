@@ -71,10 +71,10 @@ public class Xbox360Script : MonoBehaviour
         Xbox360ControllerSprite = Resources.Load<Sprite>("Images/Xbox360_controller");
         Xbox360CaseSprite = Resources.Load<Sprite>("Images/Xbox360_case");
 
-        // Set colors to white
-        InteractWithXbox360Console.color = Color.white;
-        InteractWithXbox360Controller.color = Color.white;
-        InteractWithXbox360Case.color = Color.white;
+        // Set colors to black
+        InteractWithXbox360Console.color = Color.black;
+        InteractWithXbox360Controller.color = Color.black;
+        InteractWithXbox360Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         Xbox360Grabbable = Xbox360.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class Xbox360Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = Xbox360Sprite;
         ItemDescriptionName.text = "Xbox360";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Microsoft\n"+
+        "Released: 2005\n"+
+        "About: The Xbox 360 was developed and manufactured by Microsoft and released late 2005 globally. The console featured a sleek, customizable design with interchangeable faceplates and a concave shape. The Xbox 360 was a significant commercial success, even with its initial hardware issues, notably the 'Red Ring of Death'. The Xbox 360 introduced the Kinect motion-sensing accessory, an answer to Nintendo’s Wii, which allowed for controller-free gaming and the use of voice commands.";
     }
     public void Xbox360ControllerInfo(){
         ItemDescriptionImage.sprite = Xbox360ControllerSprite;
         ItemDescriptionName.text = "Xbox360";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Xbox 360 controller is lauded for its balanced design and ergonomic comfort. It is powered by 2 AA batteries on the back of the controller. There is also a wireless version of the controller, for a seamless and clutter-free gaming experience.";
     }
     public void Xbox360CaseInfo(){
         ItemDescriptionImage.sprite = Xbox360CaseSprite;
         ItemDescriptionName.text = "Xbox360";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Xbox 360 game case is a standard-sized plastic DVD case designed to protect and display Xbox 360 game discs. This design, usually in a distinctive green color, became synonymous with the Xbox 360 brand during its lifespan from the mid-2000s to the mid-2010s";
     }
 }

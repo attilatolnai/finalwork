@@ -71,10 +71,10 @@ public class XboxOneScript : MonoBehaviour
         XboxOneControllerSprite = Resources.Load<Sprite>("Images/XboxOne_controller");
         XboxOneCaseSprite = Resources.Load<Sprite>("Images/XboxOne_case");
 
-        // Set colors to white
-        InteractWithXboxOneConsole.color = Color.white;
-        InteractWithXboxOneController.color = Color.white;
-        InteractWithXboxOneCase.color = Color.white;
+        // Set colors to black
+        InteractWithXboxOneConsole.color = Color.black;
+        InteractWithXboxOneController.color = Color.black;
+        InteractWithXboxOneCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         XboxOneGrabbable = XboxOne.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class XboxOneScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = XboxOneSprite;
         ItemDescriptionName.text = "XboxOne";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Microsoft\n"+
+        "Released: 2013\n"+
+        "About: The Xbox One was developed and manufactured by Microsoft and released late 2013. The Xbox One had a rough launch marred by controversy. This mistake turned out to be detrimental to Microsoft as the Xbox One lost out to Sony’s PlayStation 4 during this generation.";
     }
     public void XboxOneControllerInfo(){
         ItemDescriptionImage.sprite = XboxOneControllerSprite;
         ItemDescriptionName.text = "XboxOne";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Xbox One controller made subtle yet impactful improvements to its predecessor. Its design emphasizes comfort and precision, featuring textured grips and refined contours for enhanced handling during gameplay.";
     }
     public void XboxOneCaseInfo(){
         ItemDescriptionImage.sprite = XboxOneCaseSprite;
         ItemDescriptionName.text = "XboxOne";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Xbox One game case is a robust and angular plastic case featuring a distinctive green color scheme, reminiscent of the Xbox brand and setting it apart from other consoles. Inside, the case includes a secure plastic tray with a central spindle to hold the game disc, along with clips or a sleeve for any additional inserts or manuals.";
     }
 }

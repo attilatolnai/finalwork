@@ -71,10 +71,10 @@ public class WiiScript : MonoBehaviour
         WiiControllerSprite = Resources.Load<Sprite>("Images/Wii_controller");
         WiiCaseSprite = Resources.Load<Sprite>("Images/Wii_case");
 
-        // Set colors to white
-        InteractWithWiiConsole.color = Color.white;
-        InteractWithWiiController.color = Color.white;
-        InteractWithWiiCase.color = Color.white;
+        // Set colors to black
+        InteractWithWiiConsole.color = Color.black;
+        InteractWithWiiController.color = Color.black;
+        InteractWithWiiCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         WiiGrabbable = Wii.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class WiiScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = WiiSprite;
         ItemDescriptionName.text = "Wii";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Nintendo\n"+
+        "Released: 2006\n"+
+        "About: The Wii featured a compact, vertical design that could also be positioned horizontally and had a disc drive that was compatible with GameCube games. The Wii’s goal was to target a broader audience beyond traditional gamers, wanting to include families and older adults with the Wii. ";
     }
     public void WiiControllerInfo(){
         ItemDescriptionImage.sprite = WiiControllerSprite;
         ItemDescriptionName.text = "Wii";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The controller for the Wii is called 'Wiimote' and revolutionized gaming with its motion-sensing capabilities, allowing players to interact with games through physical movement. Resembling a TV remote, it features a minimalist design with a D-pad, A button on the front, and B trigger on the back, ensuring intuitive controls. ";
     }
     public void WiiCaseInfo(){
         ItemDescriptionImage.sprite = WiiCaseSprite;
         ItemDescriptionName.text = "Wii";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Wii game case is a standard-sized plastic DVD case designed to protect and display Wii game discs. The front cover features the game's title and artwork, along with the Wii branding and logos. Typically, the case is white, reflecting the sleek and clean design aesthetic of the Wii console. ";
     }
 }

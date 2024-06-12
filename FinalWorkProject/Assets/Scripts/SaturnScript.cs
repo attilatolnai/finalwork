@@ -73,10 +73,10 @@ public class SaturnScript : MonoBehaviour
         SaturnControllerSprite = Resources.Load<Sprite>("Images/Saturn_controller");
         SaturnCaseSprite = Resources.Load<Sprite>("Images/Saturn_case");
 
-        // Set colors to white
-        InteractWithSaturnConsole.color = Color.white;
-        InteractWithSaturnController.color = Color.white;
-        InteractWithSaturnCase.color = Color.white;
+        // Set colors to black
+        InteractWithSaturnConsole.color = Color.black;
+        InteractWithSaturnController.color = Color.black;
+        InteractWithSaturnCase.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         SaturnGrabbable = Saturn.GetComponent<OVRGrabbable>();
@@ -169,22 +169,20 @@ public class SaturnScript : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = SaturnSprite;
         ItemDescriptionName.text = "Saturn";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sega\n"+
+        "Released: 1994\n"+
+        "About: The Sega Saturn was developed and manufactured by Sega and had a strong start in Japan, but its early release in North America, which surprised retailers and consumers, led to a rocky launch.\n"+
+        "The Saturn faced competition from the PlayStation and Nintendo 64, which impacted its commercial success and led to being the least successful console between the 3, having only sold approximately 9.26 million units worldwide. While the Saturn’s arcade ports and 2D games were praised, it struggled to compete in the emerging 3D gaming market. ";
     }
     public void SaturnControllerInfo(){
         ItemDescriptionImage.sprite = SaturnControllerSprite;
         ItemDescriptionName.text = "Saturn";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Sega Saturn controller is celebrated for its comfortable, rounded design and advanced button layout. It features a cross-shaped D-pad on the left side. On the right side, it has six action buttons arranged labeled A, B, C, X, Y, and Z.\n"+
+        "The controller also includes 'Start' and 'Select' buttons in the center for pausing games and navigating menus. Additionally, the two shoulder buttons, L and R, on the top edge, add further versatility and control.";
     }
     public void SaturnCaseInfo(){
         ItemDescriptionImage.sprite = SaturnCaseSprite;
         ItemDescriptionName.text = "Saturn";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The Sega Saturn case is a tall, plastic clamshell design used to protect and display Sega Saturn game discs. The front cover features detailed artwork and the game's title while the inside contains a plastic tray with a spindle to securely hold the game disc, and it also includes clips or a sleeve to hold the instruction manual or other inserts.";
     }
 }

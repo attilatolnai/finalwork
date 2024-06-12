@@ -71,10 +71,10 @@ public class PS3Script : MonoBehaviour
         PS3ControllerSprite = Resources.Load<Sprite>("Images/PS3_controller");
         PS3CaseSprite = Resources.Load<Sprite>("Images/PS3_case");
 
-        // Set colors to white
-        InteractWithPS3Console.color = Color.white;
-        InteractWithPS3Controller.color = Color.white;
-        InteractWithPS3Case.color = Color.white;
+        // Set colors to black
+        InteractWithPS3Console.color = Color.black;
+        InteractWithPS3Controller.color = Color.black;
+        InteractWithPS3Case.color = Color.black;
         
         // Get 'grabbable' from the gameObjects
         PS3Grabbable = PS3.GetComponent<OVRGrabbable>();
@@ -164,22 +164,18 @@ public class PS3Script : MonoBehaviour
         //Update InfoCanvas
         ItemDescriptionImage.sprite = PS3Sprite;
         ItemDescriptionName.text = "PS3";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "Made by: Sony Computer Entertainment\n"+
+        "Released: 2006\n"+
+        "About: The PlayStation 3 was the first console to use Blu-ray discs, allowing for high-capacity storage and HD video playback. It was able to play PlayStation and PlayStation 2 games in its early models, though this feature was later removed in subsequent revisions to reduce costs. Despite early struggles, The PlayStation 3 sold approximately 87.4 million units worldwide. The PS3's eventual success demonstrated Sony's resilience and ability to compete in the evolving gaming landscape.";
     }
     public void PS3ControllerInfo(){
         ItemDescriptionImage.sprite = PS3ControllerSprite;
         ItemDescriptionName.text = "PS3";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The DualShock 3, released with the PlayStation 3 in 2007, refined the classic PlayStation controller design with enhanced functionality and wireless connectivity. It introduced Sixaxis motion sensing technology, allowing for motion-controlled interactions in supported games. The controller's built-in vibration feedback and ergonomic design provided an immersive and comfortable gaming experience, solidifying its place in gaming history.";
     }
     public void PS3CaseInfo(){
         ItemDescriptionImage.sprite = PS3CaseSprite;
         ItemDescriptionName.text = "PS3";
-        ItemDescriptionText.text = "Made by: ...\n"+
-        "Released: ...\n"+
-        "About: ...";
+        ItemDescriptionText.text = "About: The PS3 game case is a standard-sized plastic Blu-ray case designed to protect and display PlayStation 3 game discs. The case is a translucent grey, aligning with the Blu-ray format and giving it a distinct, sleek appearance. Inside, the case includes a plastic tray with a central spindle to securely hold the disc, along with clips or a sleeve for the instruction manual and other inserts.";
     }
 }

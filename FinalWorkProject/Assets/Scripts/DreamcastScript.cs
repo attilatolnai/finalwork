@@ -179,8 +179,7 @@ public class DreamcastScript : MonoBehaviour
     public void DreamcastControllerInfo(){
         ItemDescriptionImage.sprite = DreamcastControllerSprite;
         ItemDescriptionName.text = "Dreamcast";
-        ItemDescriptionText.text = "Made by: Sega\n"+
-        "About: The Dreamcast controller, designed for the Sega Dreamcast console, featured an innovative layout with a built-in\n"+
+        ItemDescriptionText.text = "About: The Dreamcast controller, designed for the Sega Dreamcast console, featured an innovative layout with a built-in\n"+
         "memory card slot for the VMU (Visual Memory Unit), providing additional screen functionality and game-saving capabilities.\n"+
         "Despite mixed reviews on its ergonomics, the Dreamcast controller is celebrated for its forward-thinking design and\n"+
         "integration with the console's advanced features.";
