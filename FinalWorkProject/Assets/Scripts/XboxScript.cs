@@ -71,7 +71,7 @@ public class XboxScript : MonoBehaviour
         // Load sprites from Resources
         XboxSprite = Resources.Load<Sprite>("Images/Xbox_console");
         XboxControllerSprite = Resources.Load<Sprite>("Images/Xbox_controller");
-        XboxCaseSprite = Resources.Load<Sprite>("Images/Xbox_case");
+        XboxCaseSprite = Resources.Load<Sprite>("Images/Xbox360_case");
 
         // Set colors to black
         InteractWithXboxConsole.color = Color.black;

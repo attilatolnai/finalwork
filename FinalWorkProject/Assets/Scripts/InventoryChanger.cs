@@ -32,7 +32,6 @@ public class InventoryChanger : MonoBehaviour
     public GameObject InventoryControllerMenu;
     public GameObject InventoryCartridgeMenu;
     public GameObject InventoryCaseMenu;
-    public GameObject InventoryGameMenu;
     public GameObject Inventory_Sidebar;
     public GameObject InfoCanvas;
 [Header("References ConsoleNameBtn's")]
@@ -163,7 +162,6 @@ public class InventoryChanger : MonoBehaviour
         InventoryControllerMenu.SetActive(false);
         InventoryCartridgeMenu.SetActive(false);
         InventoryCaseMenu.SetActive(false);
-        InventoryGameMenu.SetActive(false);
         ConsoleNameBtn1.onClick.AddListener(ConsoleNameBtn1Click);
         ConsoleNameBtn2.onClick.AddListener(ConsoleNameBtn2Click);
         ConsoleNameBtn3.onClick.AddListener(ConsoleNameBtn3Click);
@@ -198,7 +196,6 @@ public class InventoryChanger : MonoBehaviour
         InventoryControllerMenu.SetActive(true);
         InventoryCartridgeMenu.SetActive(false);
         InventoryCaseMenu.SetActive(false);
-        InventoryGameMenu.SetActive(false);
         ControllerNameBtn1.onClick.AddListener(ControllerNameBtn1Click);
         ControllerNameBtn2.onClick.AddListener(ControllerNameBtn2Click);
         ControllerNameBtn3.onClick.AddListener(ControllerNameBtn3Click);
@@ -229,7 +226,6 @@ public class InventoryChanger : MonoBehaviour
         InventoryControllerMenu.SetActive(false);
         InventoryCartridgeMenu.SetActive(true);
         InventoryCaseMenu.SetActive(false);
-        InventoryGameMenu.SetActive(false);
         CartridgeNameBtn1.onClick.AddListener(CartridgeNameBtn1Click);
         CartridgeNameBtn2.onClick.AddListener(CartridgeNameBtn2Click);
         CartridgeNameBtn3.onClick.AddListener(CartridgeNameBtn3Click);
@@ -245,7 +241,6 @@ public class InventoryChanger : MonoBehaviour
         InventoryControllerMenu.SetActive(false);
         InventoryCartridgeMenu.SetActive(false);
         InventoryCaseMenu.SetActive(true);
-        InventoryGameMenu.SetActive(false);
         CaseNameBtn1.onClick.AddListener(CaseNameBtn1Click);
         CaseNameBtn2.onClick.AddListener(CaseNameBtn2Click);
         CaseNameBtn3.onClick.AddListener(CaseNameBtn3Click);
@@ -262,16 +257,6 @@ public class InventoryChanger : MonoBehaviour
         CaseNameBtn14.onClick.AddListener(CaseNameBtn14Click);
         
         SetUpPages(InventoryCaseMenu);
-    }
-
-    public void GameBtnClick(){
-        //Enable InventoryGameMenu and disable the rest
-        InventoryMenu.SetActive(false);
-        InventoryConsoleMenu.SetActive(false);
-        InventoryControllerMenu.SetActive(false);
-        InventoryCartridgeMenu.SetActive(false);
-        InventoryCaseMenu.SetActive(false);
-        InventoryGameMenu.SetActive(true);
     }
 
     //ConsoleNameBtnClick-------------------------------------------

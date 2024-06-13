@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Gen6.unity
     guid: ef758fa6157a89e44ac05741271da379
   - enabled: 1
+    path: Assets/Scenes/Gen7.unity
+    guid: 445efbe78ed42e04dba9d7c98966e29e
+  - enabled: 1
+    path: Assets/Scenes/Gen8.unity
+    guid: f3b193f014694c744b3b728c8983b5ee
+  - enabled: 1
     path: Assets/Scenes/Gen9.unity
     guid: 18db165f6eac5d0429d1582e4acdc625
   - enabled: 1

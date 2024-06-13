@@ -27810,14 +27810,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 126836663222258577, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: N64
+      objectReference: {fileID: 0}
+    - target: {fileID: 312981514736712111, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Wii
+      objectReference: {fileID: 0}
+    - target: {fileID: 698041212030181751, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: GameCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 852548063006662653, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Saturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167578412870379418, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474317919768444927, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587366911609073803, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700518553250639982, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2793640822545717338, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
       propertyPath: m_Name
       value: OVRPlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856342442843764694, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: PS4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134076228783336380, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Dreamcast
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647882178554958266, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864365091823504376, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4022435913623891952, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
       propertyPath: pointer
       value: 
       objectReference: {fileID: 396379503}
+    - target: {fileID: 4374390211836031229, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Xbox360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399679237781591298, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Switch
+      objectReference: {fileID: 0}
     - target: {fileID: 4812570116793220886, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
       propertyPath: N64Script
       value: 
@@ -27902,12 +27958,34 @@ PrefabInstance:
       propertyPath: CustomRightHand_AtariCartridge
       value: 
       objectReference: {fileID: 75189104}
+    - target: {fileID: 6712308740675211346, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: PS3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456908078873895931, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: PS2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062887315276237416, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: XboxOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191049114969910029, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: Xbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414689942054933091, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+      propertyPath: m_text
+      value: PS1
+      objectReference: {fileID: 0}
     - target: {fileID: 9064875174933696628, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
       propertyPath: pointer
       value: 
       objectReference: {fileID: 396379503}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8363756765140401160, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
+    - {fileID: 5955248857301451262, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ee6b58c9b04f724f8e72c6964620529, type: 3}

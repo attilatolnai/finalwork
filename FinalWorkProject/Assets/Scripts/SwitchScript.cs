@@ -67,7 +67,7 @@ public class SwitchScript : MonoBehaviour
         ItemCounterSwitch = FindObjectOfType<ItemCounterSwitch>();
         
         // Load sprites from Resources
-        SwitchSprite = Resources.Load<Sprite>("Images/Switch_console");
+        SwitchSprite = Resources.Load<Sprite>("Images/switch_console");
         SwitchControllerSprite = Resources.Load<Sprite>("Images/Switch_controller");
         SwitchCaseSprite = Resources.Load<Sprite>("Images/Switch_Case");
 
@@ -171,7 +171,7 @@ public class SwitchScript : MonoBehaviour
     public void SwitchControllerInfo(){
         ItemDescriptionImage.sprite = SwitchControllerSprite;
         ItemDescriptionName.text = "Switch";
-        ItemDescriptionText.text = "About: ...";
+        ItemDescriptionText.text = "About: The Joy-Con controller is a marvel of versatility and compact design. Its modular construction allows it to function as a standalone controller or attach to the sides of the Switch console for handheld play.";
     }
     public void SwitchCaseInfo(){
         ItemDescriptionImage.sprite = SwitchCaseSprite;

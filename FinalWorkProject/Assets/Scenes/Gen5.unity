@@ -29046,7 +29046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6830254938876279103, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6835920504113684912, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
       propertyPath: m_Name
@@ -29729,7 +29729,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8065965083606880685, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
+    - {fileID: 5280281157020167259, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7052139491381492339, guid: bef163c1459eebd4eb2d73ec986f552b, type: 3}
       insertIndex: -1
@@ -30314,6 +30316,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMuseum
       objectReference: {fileID: 0}
+    - target: {fileID: 779552966523778254, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -245
+      objectReference: {fileID: 0}
     - target: {fileID: 903137752533998802, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -30324,6 +30330,14 @@ PrefabInstance:
       objectReference: {fileID: -3995341474344950768, guid: d2c4edeba6296c148b70d3c2a779f0b4, type: 2}
     - target: {fileID: 903137752533998802, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
       propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197871696128395573, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270794070063012095, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1421588584737396719, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
@@ -30422,6 +30436,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b9dac0b8ad5315a4fbc6a503392b9369, type: 3}
+    - target: {fileID: 7753631498564826871, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 231
+      objectReference: {fileID: 0}
     - target: {fileID: 9119278135759727436, guid: 75f47516fa37ee044a751bbb4d4e10f4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
